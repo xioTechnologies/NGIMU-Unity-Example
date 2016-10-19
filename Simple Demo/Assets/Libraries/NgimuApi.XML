@@ -1,0 +1,4364 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NgimuApi</name>
+    </assembly>
+    <members>
+        <member name="P:NgimuApi.Data.CtsDataBase.State">
+            <summary>
+            Gets the serial CTS input state.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Data.CtsDataBase.OnMessageReceived(Rug.Osc.OscMessage)">
+            <summary>
+            Method called when an OSC message associated with this data object is received.
+            </summary>
+            <param name="message">Received OSC message.</param>
+            <returns>True if the OSC message was successfully parsed.</returns>
+        </member>
+        <member name="T:NgimuApi.Data.MagnitudesData">
+            <summary>
+            Magnitudes data received from the device.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.MagnitudesData.OscAddress">
+            <summary>
+            Gets the OSC address for this data object.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.MagnitudesData.Gyroscope">
+            <summary>
+            Gets the gyroscope magnitude in degrees per second.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.MagnitudesData.Accelerometer">
+            <summary>
+            Gets the accelerometer magnitude in g.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.MagnitudesData.Magnetometer">
+            <summary>
+            Gets the magnetometer magnitude in microteslas (uT).
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Data.MagnitudesData.OnMessageReceived(Rug.Osc.OscMessage)">
+            <summary>
+            Method called when an OSC message associated with this data object is received.
+            </summary>
+            <param name="message">Received OSC message.</param>
+            <returns>True if the OSC message was successfully parsed.</returns>
+        </member>
+        <member name="T:NgimuApi.Data.RssiData">
+            <summary>
+            RSSI data received from the device.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.RssiData.OscAddress">
+            <summary>
+            Gets the OSC address for this data object.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.RssiData.Power">
+            <summary>
+            Gets the RSSI power in dBm.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.RssiData.Percentage">
+            <summary>
+            Gets the RSSI in percentage.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Data.RssiData.OnMessageReceived(Rug.Osc.OscMessage)">
+            <summary>
+            Method called when an OSC message associated with this data object is received.
+            </summary>
+            <param name="message">Received OSC message.</param>
+            <returns>True if the OSC message was successfully parsed.</returns>
+        </member>
+        <member name="T:NgimuApi.Data.SerialCtsData">
+            <summary>
+            Serial CTS input data received from the device.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.SerialCtsData.OscAddress">
+            <summary>
+            Gets the OSC address for this data object.
+            </summary>
+        </member>
+        <member name="T:NgimuApi.Data.AuxiliarySerialCtsData">
+            <summary>
+            Auxiliary serial CTS input data received from the device.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.AuxiliarySerialCtsData.OscAddress">
+            <summary>
+            Gets the OSC address for this data object.
+            </summary>
+        </member>
+        <member name="T:NgimuApi.Data.ErrorData">
+            <summary>
+            Error message received from the device.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.ErrorData.OscAddress">
+            <summary>
+            Gets the OSC address for this data object.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.ErrorData.Message">
+            <summary>
+            Gets the error message.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Data.ErrorData.OnMessageReceived(Rug.Osc.OscMessage)">
+            <summary>
+            Method called when an OSC message associated with this data object is received.
+            </summary>
+            <param name="message">Received OSC message.</param>
+            <returns>True if the OSC message was successfully parsed.</returns>
+        </member>
+        <member name="T:NgimuApi.Data.HumidityData">
+            <summary>
+            Humidity data received from the device.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.HumidityData.OscAddress">
+            <summary>
+            Gets the OSC address for this data object.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.HumidityData.Humidity">
+            <summary>
+            Gets the humidity in %.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Data.HumidityData.OnMessageReceived(Rug.Osc.OscMessage)">
+            <summary>
+            Method called when an OSC message associated with this data object is received.
+            </summary>
+            <param name="message">Received OSC message.</param>
+            <returns>True if the OSC message was successfully parsed.</returns>
+        </member>
+        <member name="T:NgimuApi.Data.EarthAccelerationData">
+            <summary>
+            Earth acceleration data received from the device.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.EarthAccelerationData.OscAddress">
+            <summary>
+            Gets the OSC address for this data object.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.EarthAccelerationData.EarthAcceleration">
+            <summary>
+            Gets the Earth acceleration in g.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Data.EarthAccelerationData.OnMessageReceived(Rug.Osc.OscMessage)">
+            <summary>
+            Method called when an OSC message associated with this data object is received.
+            </summary>
+            <param name="message">Received OSC message.</param>
+            <returns>True if the OSC message was successfully parsed.</returns>
+        </member>
+        <member name="T:NgimuApi.Data.AuxiliarySerialData">
+            <summary>
+            Auxiliary serial data received from the device.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.AuxiliarySerialData.OscAddress">
+            <summary>
+            Gets the OSC address for this data object.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.AuxiliarySerialData.IsDataAString">
+            <summary>
+            True if the received OSC message represented the data as an OSC string instead of an OSC blob.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.AuxiliarySerialData.Data">
+            <summary>
+            Gets the auxiliary serial data as a byte array.  This data will be null if the received OSC message represented the data as an OSC string.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.AuxiliarySerialData.StringData">
+            <summary>
+            Gets the auxiliary serial data as a string.  This data will be null if the received OSC message represented the data as an OSC blob.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Data.AuxiliarySerialData.OnMessageReceived(Rug.Osc.OscMessage)">
+            <summary>
+            Method called when an OSC message associated with this data object is received.
+            </summary>
+            <param name="message">Received OSC message.</param>
+            <returns>True if the OSC message was successfully parsed.</returns>
+        </member>
+        <member name="T:NgimuApi.Data.AnalogueInputsData">
+            <summary>
+            Analogue input data received from the device.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.AnalogueInputsData.OscAddress">
+            <summary>
+            Gets the OSC address for this data object.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.AnalogueInputsData.Array">
+            <summary>
+            Gets the analogue input measurements as an array in volts (V).
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.AnalogueInputsData.Channel1">
+            <summary>
+            Gets the analogue input channel 1 measurement in volts (V).
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.AnalogueInputsData.Channel2">
+            <summary>
+            Gets the analogue input channel 2 measurement in volts (V).
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.AnalogueInputsData.Channel3">
+            <summary>
+            Gets the analogue input channel 3 measurement in volts (V).
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.AnalogueInputsData.Channel4">
+            <summary>
+            Gets the analogue input channel 4 measurement in volts (V).
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.AnalogueInputsData.Channel5">
+            <summary>
+            Gets the analogue input channel 5 measurement in volts (V).
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.AnalogueInputsData.Channel6">
+            <summary>
+            Gets the analogue input channel 6 measurement in volts (V).
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.AnalogueInputsData.Channel7">
+            <summary>
+            Gets the analogue input channel 7 measurement in volts (V).
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.AnalogueInputsData.Channel8">
+            <summary>
+            Gets the analogue input channel 8 measurement in volts (V).
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Data.AnalogueInputsData.#ctor">
+            <summary>
+            Class constructor necessary to initialise the array member of this class.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Data.AnalogueInputsData.OnMessageReceived(Rug.Osc.OscMessage)">
+            <summary>
+            Method called when an OSC message associated with this data object is received.
+            </summary>
+            <param name="message">Received OSC message.</param>
+            <returns>True if the OSC message was successfully parsed.</returns>
+        </member>
+        <member name="T:NgimuApi.Data.ButtonData">
+            <summary>
+            Altitude data received from the device.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.ButtonData.OscAddress">
+            <summary>
+            Gets the OSC address for this data object.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Data.ButtonData.OnMessageReceived(Rug.Osc.OscMessage)">
+            <summary>
+            Method called when an OSC message associated with this data object is received.
+            </summary>
+            <param name="message">Received OSC message.</param>
+            <returns>True if the OSC message was successfully parsed.</returns>
+        </member>
+        <member name="T:NgimuApi.Data.EulerAnglesData">
+            <summary>
+            Euler angle data received from the device.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.EulerAnglesData.OscAddress">
+            <summary>
+            Gets the OSC address for this data object.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.EulerAnglesData.EulerAngles">
+            <summary>
+            Euler angles describing the orientation of the device relative to the Earth.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Data.EulerAnglesData.OnMessageReceived(Rug.Osc.OscMessage)">
+            <summary>
+            Method called when an OSC message associated with this data object is received.
+            </summary>
+            <param name="message">Received OSC message.</param>
+            <returns>True if the OSC message was successfully parsed.</returns>
+        </member>
+        <member name="T:NgimuApi.Data.RotationMatrixData">
+            <summary>
+            Rotation matrix data received from the device.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.RotationMatrixData.OscAddress">
+            <summary>
+            Gets the OSC address for this data object.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.RotationMatrixData.RotationMatrix">
+            <summary>
+            Rotation matrix describing the orientation of the device relative to the Earth.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Data.RotationMatrixData.OnMessageReceived(Rug.Osc.OscMessage)">
+            <summary>
+            Method called when an OSC message associated with this data object is received.
+            </summary>
+            <param name="message">Received OSC message.</param>
+            <returns>True if the OSC message was successfully parsed.</returns>
+        </member>
+        <member name="T:NgimuApi.Data.TemperatureData">
+            <summary>
+            Temperature data received from the device.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.TemperatureData.OscAddress">
+            <summary>
+            Gets the OSC address for this data object.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.TemperatureData.ProcessorTemperature">
+            <summary>
+            Gets the processor temperature in degrees Celsius.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.TemperatureData.SensorTemperature">
+            <summary>
+            Gets the accelerometer temperature in degrees Celsius.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.TemperatureData.BarometerTemperature">
+            <summary>
+            Gets the barometer temperature in degrees Celsius.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Data.TemperatureData.OnMessageReceived(Rug.Osc.OscMessage)">
+            <summary>
+            Method called when an OSC message associated with this data object is received.
+            </summary>
+            <param name="message">Received OSC message.</param>
+            <returns>True if the OSC message was successfully parsed.</returns>
+        </member>
+        <member name="T:NgimuApi.Data.LinearAccelerationData">
+            <summary>
+            Linear acceleration data received from the device.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.LinearAccelerationData.OscAddress">
+            <summary>
+            Gets the OSC address for this data object.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.LinearAccelerationData.LinearAcceleration">
+            <summary>
+            Gets the linear acceleration in g.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Data.LinearAccelerationData.OnMessageReceived(Rug.Osc.OscMessage)">
+            <summary>
+            Method called when an OSC message associated with this data object is received.
+            </summary>
+            <param name="message">Received OSC message.</param>
+            <returns>True if the OSC message was successfully parsed.</returns>
+        </member>
+        <member name="T:NgimuApi.Data.AltitudeData">
+            <summary>
+            Altitude data received from the device.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.AltitudeData.OscAddress">
+            <summary>
+            Gets the OSC address for this data object.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.AltitudeData.Altitude">
+            <summary>
+            Gets the altitude in meters.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Data.AltitudeData.OnMessageReceived(Rug.Osc.OscMessage)">
+            <summary>
+            Method called when an OSC message associated with this data object is received.
+            </summary>
+            <param name="message">Received OSC message.</param>
+            <returns>True if the OSC message was successfully parsed.</returns>
+        </member>
+        <member name="T:NgimuApi.Data.BatteryData">
+            <summary>
+            Battery data received from the device.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.BatteryData.OscAddress">
+            <summary>
+            Gets the OSC address for this data object.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.BatteryData.Percentage">
+            <summary>
+            Gets the battery percentage.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.BatteryData.Voltage">
+            <summary>
+            Gets the battery voltage in volts (V).
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.BatteryData.TimeToEmpty">
+            <summary>
+            Gets the time to empty in minutes.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.BatteryData.Current">
+            <summary>
+            Gets the battery current in milliamps (mA).
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.BatteryData.ChargerState">
+            <summary>
+            Gets the charger state.  This is a string received from the device.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.BatteryData.IsChargerConnected">
+            <summary>
+            Gets a flag indicated if the charger is connected.  This state is set to true if the time to empty is infinite.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Data.BatteryData.OnMessageReceived(Rug.Osc.OscMessage)">
+            <summary>
+            Method called when an OSC message associated with this data object is received.
+            </summary>
+            <param name="message">Received OSC message.</param>
+            <returns>True if the OSC message was successfully parsed.</returns>
+        </member>
+        <member name="T:NgimuApi.Data.QuaternionData">
+            <summary>
+            Quaternion data received from the device.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.QuaternionData.OscAddress">
+            <summary>
+            Gets the OSC address for this data object.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.QuaternionData.Quaternion">
+            <summary>
+            Quaternion describing the orientation of the device relative to the Earth.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Data.QuaternionData.OnMessageReceived(Rug.Osc.OscMessage)">
+            <summary>
+            Method called when an OSC message associated with this data object is received.
+            </summary>
+            <param name="message">Received OSC message.</param>
+            <returns>True if the OSC message was successfully parsed.</returns>
+        </member>
+        <member name="T:NgimuApi.Data.DataBase">
+            <summary>
+            Abstract class for all types of data can be received from the device.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.DataBase.Connection">
+            <summary>
+            Gets the connection that this data object is associated with.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.DataBase.HasValidValues">
+            <summary>
+            True if this data object has received a valid message. 
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.DataBase.OscAddress">
+            <summary>
+            Gets the OSC address for this data object.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.DataBase.Timestamp">
+            <summary>
+            Gets the timestamp of the most recently parsed message.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.DataBase.CsvHeader">
+            <summary>
+            Gets the header line for the CSV log file.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Data.DataBase.ToCsv(Rug.Osc.OscTimeTag)">
+            <summary>
+            Returns a CSV string of the current state of the data object.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:NgimuApi.Data.DataBase.Received">
+            <summary>
+            Raised whenever a valid message is received.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Data.DataBase.OnMessageReceived(Rug.Osc.OscMessage)">
+            <summary>
+            Method called when an OSC message associated with this data object is received.  The inheriting classes should parse messages in this method. 
+            </summary>
+            <param name="message">Received OSC message.</param>
+            <returns>True if the OSC message was successfully parsed.</returns>
+        </member>
+        <member name="T:NgimuApi.Data.SensorsData">
+            <summary>
+            Sensor data received from the device.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.SensorsData.OscAddress">
+            <summary>
+            Gets the OSC address for this data object.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.SensorsData.Gyroscope">
+            <summary>
+            Gets the gyroscope measurement in degrees per second.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.SensorsData.Accelerometer">
+            <summary>
+            Gets the accelerometer measurement in g.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.SensorsData.Magnetometer">
+            <summary>
+            Gets the magnetometer measurement in microteslas (uT).
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Data.SensorsData.Barometer">
+            <summary>
+            Gets the barometer measurement hectopascals (hPa).
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Data.SensorsData.OnMessageReceived(Rug.Osc.OscMessage)">
+            <summary>
+            Method called when an OSC message associated with this data object is received.
+            </summary>
+            <param name="message">Received OSC message.</param>
+            <returns>True if the OSC message was successfully parsed.</returns>
+        </member>
+        <member name="T:NgimuApi.SearchForConnections.ConnectionSearchInfo">
+            <summary>
+            Connection search information. Describes a detected possible connection. 
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SearchForConnections.ConnectionSearchInfo.DeviceDescriptor">
+            <summary>
+            Gets the serial number of the detected device. 
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SearchForConnections.ConnectionSearchInfo.ConnectionType">
+            <summary>
+            Gets the type of the connection.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SearchForConnections.ConnectionSearchInfo.ConnectionInfo">
+            <summary>
+            Gets the IConnectionInfo that can be used to create a connection.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SearchForConnections.ConnectionSearchInfo.#ctor(System.String,NgimuApi.IConnectionInfo)">
+            <summary>
+            Creates a AutoConnectionInfo object. 
+            </summary>
+            <param name="serialNumber">The serial number of the device.</param>
+            <param name="info">A IConnectionInfo that can be used to create a connection.</param>
+        </member>
+        <member name="F:NgimuApi.SearchForConnections.SearchForConnections.OnlyIpV4">
+            <summary>
+            Enumerate only IP version 4 UDP connections.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SearchForConnections.SearchForConnections.#ctor(NgimuApi.SearchForConnections.ConnectionSearchTypes,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NgimuApi.SearchForConnections.SearchForConnections"/> class.
+            </summary>
+            <param name="search">The search.</param>
+            <param name="timeout">The timeout in milliseconds.</param>
+            <param name="sendInterval">The send interval in milliseconds.</param>
+            <autogeneratedoc />
+            TODO Edit XML Comment Template for #ctor
+        </member>
+        <member name="M:NgimuApi.SearchForConnections.SearchForConnections.EnumerateConnections(NgimuApi.SearchForConnections.ConnectionSearchTypes,System.Int32,System.Int32)">
+            <summary>
+            Enumerate all available connections. Note: This method blocks until connections have been enumerated.
+            </summary>
+            <param name="autoConnectorSearchTypes">Search filter.</param>
+            <param name="timeout">The maximum time before failure.</param>
+            <param name="interval">Time out in milliseconds between each process iteration.</param>
+            <returns>All available connections.</returns>
+            <autogeneratedoc />
+            TODO Edit XML Comment Template for EnumerateConnections
+        </member>
+        <member name="T:NgimuApi.SearchForConnections.ConnectionSearchTypes">
+            <summary>
+            Connection search type filter.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.SearchForConnections.ConnectionSearchTypes.None">
+            <summary>
+            Don't search for anything.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.SearchForConnections.ConnectionSearchTypes.Udp">
+            <summary>
+            Search for UDP connections.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.SearchForConnections.ConnectionSearchTypes.Serial">
+            <summary>
+            Search for serial connections.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.SearchForConnections.ConnectionSearchTypes.All">
+            <summary>
+            Search for any connection.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Bootloader.BootloaderHelper.UploadFirmware(System.String,System.String)">
+            <summary>
+            Upload firmware to a specified serial port. The device bootloader must be active before calling this function. 
+            </summary>
+            <param name="hexFile">Full path to a hex file to upload.</param>
+            <param name="portName">The name of the serial port.</param>
+            <returns>True if the upload was successful.</returns>
+        </member>
+        <member name="T:NgimuApi.CommandMetaData">
+            <summary>
+            A single command to be sent to the imu and confirmed by an asynchronous process.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.CommandMetaData.Name">
+            <summary>
+            Get the friendly name of the command.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.CommandMetaData.Text">
+            <summary>
+            Gets the menu text for the command.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.CommandMetaData.IsVisible">
+            <summary>
+            Is the command visible in the GUI.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.CommandMetaData.DisconnectSerialOnSuccess">
+            <summary>
+            True if the connection should be disconnected upon the successful completion of the command. 
+            </summary>
+        </member>
+        <member name="P:NgimuApi.CommandMetaData.OscAddress">
+            <summary>
+            Gets the OSC address string for the command.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.CommandMetaData.Arguments">
+            <summary>
+            Gets the OSC message arguments to supply when executing the command.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.CommandMetaData.Message">
+            <summary>
+            Get the commands OSC message. 
+            </summary>
+        </member>
+        <member name="M:NgimuApi.CommandMetaData.#ctor(System.String,System.Boolean,System.Boolean,System.String,System.String[])">
+            <summary>
+            Creates a IMU command instance.
+            </summary>
+            <param name="text">The text to use in menus.</param>
+            <param name="shortcut">The shortcut keys.</param>
+            <param name="confirm">Should the GUI confirm this command.</param>
+            <param name="confirmMessage">The message to be displayed when confirming.</param>
+            <param name="disconnectSerialOnSuccess">True if the connection should be disconnected upon the successful completion of the command.</param>
+            <param name="isVisible">Is the command visible in the GUI.</param>
+            <param name="address">The OSC address of the command.</param>
+            <param name="arguments">An array of arguments to send with the command. Arguments will be parsed as if part of an OSC message string.</param>
+        </member>
+        <member name="M:NgimuApi.CommandMetaData.GetMessage(System.Object[])">
+            <summary>
+            Get a command OscMessages with the arguments replaced with the supplied ones.
+            </summary>
+            <param name="args">Osc arguments.</param>
+            <returns>A Osc Message.</returns>
+        </member>
+        <member name="T:NgimuApi.CommandProcess">
+            <summary>
+            Asynchronous process.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.CommandProcess.commandCallback">
+            <summary>
+            All the callbacks in this process.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.CommandProcess.Connection">
+            <summary>
+            Gets the connection to be used.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.CommandProcess.IsRunning">
+            <summary>
+            True if the process is running.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.CommandProcess.Reporter">
+            <summary>
+            Gets the reporter for the process.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.CommandProcess.Result">
+            <summary>
+            Gets the result of the asynchronous process.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.CommandProcess.RetryLimit">
+            <summary>
+            Gets the maximum number of retries before failure.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.CommandProcess.Timeout">
+            <summary>
+            Gets the time out in milliseconds between each process iteration.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.CommandProcess.#ctor(NgimuApi.Connection,NgimuApi.IReporter,NgimuApi.CommandCallback,System.Int32,System.Int32)">
+            <summary>
+            Create an asynchronous process.
+            </summary>
+            <param name="connection">An Connection to be used for communication.</param>
+            <param name="reporter">Progress reporter.</param>
+            <param name="callback">Callback callback to be processed.</param>
+            <param name="timeout">Time out in milliseconds between each process iteration.</param>
+            <param name="retryLimit">The maximum number of retries before failure.</param>
+        </member>
+        <member name="M:NgimuApi.CommandProcess.Send(NgimuApi.Connection,NgimuApi.IReporter,Rug.Osc.OscMessage)">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="connection">The connection to use.</param>
+            <param name="reporter">Progress reporter.</param>
+            <param name="message">Command OSC message.</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.CommandProcess.Send(NgimuApi.Connection,NgimuApi.IReporter,System.Int32,System.Int32,Rug.Osc.OscMessage)">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="connection">The connection to use</param>
+            <param name="reporter">Progress reporter.</param>
+            <param name="timeout">The timeout in milliseconds.</param>
+            <param name="retryLimit">The number of retries to try before aborting.</param>
+            <param name="message">Command OSC message.</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.CommandProcess.Abort">
+            <summary>
+            Stop asynchronous process as soon as possible.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.CommandProcess.Send">
+            <summary>
+            Run the process synchronised and return the result immediately.
+            </summary>
+            <returns>The result of the process</returns>
+        </member>
+        <member name="M:NgimuApi.CommandProcess.SendAsync">
+            <summary>
+            Start the asynchronous process.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.CommandProcess.AsynchronousProcessThread">
+            <summary>
+            Run the asynchronous process thread.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.CommandProcess.OnCompleted">
+            <summary>
+            Called when the process has stopped.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.CommandProcess.OnError(System.String)">
+            <summary>
+            Called when an error occurs.
+            </summary>
+            <param name="message">A textual message.</param>
+        </member>
+        <member name="M:NgimuApi.CommandProcess.OnError(System.String,System.String)">
+            <summary>
+            Called when an error occurs.
+            </summary>
+            <param name="message">A textual message.</param>
+            <param name="detail">Additional detail about the error.</param>
+        </member>
+        <member name="M:NgimuApi.CommandProcess.OnInfo(System.String)">
+            <summary>
+            Called when there is info to display.
+            </summary>
+            <param name="message">A textual message.</param>
+        </member>
+        <member name="M:NgimuApi.CommandProcess.SendMessage(Rug.Osc.OscMessage)">
+            <summary>
+            Send a OSC message to the device.
+            </summary>
+            <param name="message">An OSC device.</param>
+            <returns>True if the message was sent.</returns>
+        </member>
+        <member name="T:NgimuApi.CommandCallback">
+            <summary>
+            Command process callback.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.CommandCallback.Message">
+            <summary>
+            Command callback to be sent.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.CommandCallback.OscAddress">
+            <summary>
+            The address of the callback.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.CommandCallback.HasCallbackCompleted">
+            <summary>
+            True if the callback is complete.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.CommandCallback.ReturnMessage">
+            <summary>
+            Gets the message that was returned if there was one.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.CommandCallback.#ctor(Rug.Osc.OscMessage)">
+            <summary>
+            Create a new command callback.
+            </summary>
+            <param name="message">The callback to be sent and listened for the response from.</param>
+        </member>
+        <member name="M:NgimuApi.CommandCallback.OnMessageReceived(Rug.Osc.OscMessage)">
+            <summary>
+            Called when a command confirmation callback message is received.
+            </summary>
+            <param name="message">A OSC message.</param>
+        </member>
+        <member name="M:NgimuApi.CommandCallback.ResetCallbackState">
+            <summary>
+            Reset the callback state to non-complete.
+            </summary>
+        </member>
+        <member name="T:NgimuApi.ConnectionImplementations.FileReadConnectionImplementation">
+            <summary>
+            Connection implementation that reads a SLIP data stream from a file.
+            </summary>
+        </member>
+        <member name="T:NgimuApi.ConnectionImplementations.SerialConnectionImplementation">
+            <summary>
+            IMU connection implementation over serial COM portName
+            </summary>
+        </member>
+        <member name="T:NgimuApi.ConnectionImplementations.UdpConnectionImplementation">
+            <summary>
+            Connection implementation over UDP 
+            </summary>
+        </member>
+        <member name="T:NgimuApi.ConnectionImplementations.ConnectionImplementation">
+            <summary>
+            Abstract connection implementation
+            </summary>
+        </member>
+        <member name="M:NgimuApi.ConnectionImplementations.ConnectionImplementation.CheckConnectionState">
+            <summary>
+            Check the state of the connection, this is pumped by the application.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.ConnectionImplementations.ConnectionImplementation.Connect">
+            <summary>
+            Connect.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.ConnectionImplementations.ConnectionImplementation.Start">
+            <summary>
+            Start listening.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.ConnectionImplementations.ConnectionImplementation.Close">
+            <summary>
+            Close. 
+            </summary>
+        </member>
+        <member name="M:NgimuApi.ConnectionImplementations.ConnectionImplementation.Dispose">
+            <summary>
+            Close and dispose.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.ConnectionImplementations.ConnectionImplementation.Send(Rug.Osc.OscPacket)">
+            <summary>
+            Send a osc packet.
+            </summary>
+            <param name="packet"></param>
+        </member>
+        <member name="T:NgimuApi.SDCardFileConnectionInfo">
+            <summary>
+            Connection info that describes a pseudo connection to read from a file. 
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SDCardFileConnectionInfo.FilePath">
+            <summary>
+            Gets or sets the path to the file. 
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SDCardFileConnectionInfo.FileExists">
+            <summary>
+            Does the file exist. 
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SDCardFileConnectionInfo.ToIDString">
+            <summary>
+            The ID to use as a unique key.
+            </summary>
+            <returns>A unique key string.</returns>
+        </member>
+        <member name="M:NgimuApi.SDCardFileConnectionInfo.#ctor">
+            <summary>
+            Creates an instance using the default values.
+            </summary>
+        </member>
+        <member name="T:NgimuApi.Helper_Strings">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Helper_Strings.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Helper_Strings.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Helper_Strings.Escape_InvalidEscapeSequence">
+            <summary>
+              Looks up a localized string similar to Invalid escape sequence at char &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Helper_Strings.Escape_InvalidEscapeSequence_InvalidHexDigit">
+            <summary>
+              Looks up a localized string similar to Invalid escape sequence at char &apos;{0}&apos; &quot;{1}&quot; is not a valid hex digit..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Helper_Strings.Escape_InvalidEscapeSequence_MissingHexValue">
+            <summary>
+              Looks up a localized string similar to Invalid escape sequence at char &apos;{0}&apos; missing hex value..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Helper_Strings.ImuAsyncProcess_AlreadyRunning">
+            <summary>
+              Looks up a localized string similar to {0} is already running..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Helper_Strings.ImuAsyncProcess_CommunicationError">
+            <summary>
+              Looks up a localized string similar to A communication error occured while {0}..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Helper_Strings.ImuAsyncProcess_CouldNot">
+            <summary>
+              Looks up a localized string similar to Could not {0} {1}..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Helper_Strings.ImuAsyncProcess_CouldNotDoAll">
+            <summary>
+              Looks up a localized string similar to Could not {0} all {1}..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Helper_Strings.ImuAsyncProcess_Retrying">
+            <summary>
+              Looks up a localized string similar to Retrying {0} of {1} {2}..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Helper_Strings.ImuAsyncProcess_Successful">
+            <summary>
+              Looks up a localized string similar to  Successfully {0} {1} of {2} {3}..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Helper_Strings.Xml_TResultMustBeAnEnum">
+            <summary>
+              Looks up a localized string similar to TResult must be an Enum..
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Helper.TimeSpanToString(System.TimeSpan,NgimuApi.TimeSpanStringFormat)">
+            <summary>
+            Converts the numeric value of this instance to its equivalent string representation.
+            </summary>
+            <param name="timeSpan">Time span to be represented as a string in the format hours:minutes:seconds:milliseconds.</param>
+            <returns>Time span represented as a string.</returns>
+        </member>
+        <member name="M:NgimuApi.Helper.DateTimeToString(System.DateTime,System.Boolean)">
+            <summary>
+            Converts the numeric value of this instance to its equivalent string representation.
+            </summary>
+            <param name="dateTime">Date and time to be represented as a string in the format year-month-date hour:minute:second.millisecond.</param>
+            <param name="includeMilliseconds"></param>
+            <returns>Date and time represented as a string.</returns>
+        </member>
+        <member name="E:NgimuApi.Reporter.Exception">
+            <summary>
+            Occurs when an exception is thrown.
+            </summary>
+        </member>
+        <member name="E:NgimuApi.Reporter.Error">
+            <summary>
+            Occurs when an error is raised.
+            </summary>
+        </member>
+        <member name="E:NgimuApi.Reporter.Info">
+            <summary>
+            Occurs when an info message is raised. 
+            </summary>
+        </member>
+        <member name="E:NgimuApi.Reporter.Message">
+            <summary>
+            Occurs when a message is transmitted or received. 
+            </summary>
+        </member>
+        <member name="E:NgimuApi.Reporter.Updated">
+            <summary>
+            Occurs when updated.
+            </summary>
+        </member>
+        <member name="E:NgimuApi.Reporter.Completed">
+            <summary>
+            Occurs apon completion.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Logging.DeviceLogger.Connection">
+            <summary>
+            Gets the connection that is the source of the logging messages.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Logging.DeviceLogger.rootDirectory">
+            <summary>Gets the root directory path.</summary>
+        </member>
+        <member name="E:NgimuApi.Logging.SessionLogger.Stopped">
+            <summary>
+            Occurs when logging has stopped.  
+            </summary>
+        </member>
+        <member name="E:NgimuApi.Logging.SessionLogger.Exception">
+            <summary>
+            Occurs when an exception is thrown.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Logging.SessionLogger.LoggingStart">
+            <summary>
+            Gets the date and time when logging started. 
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Logging.SessionLogger.LoggingPeriod">
+            <summary>
+            Gets the time span of the desired logging period. 
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Logging.SessionLogger.LoggingTime">
+            <summary>
+            Gets the time span of the duration of the current logging session. 
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Logging.SessionLogger.#ctor(NgimuApi.Logging.SessionSettings,NgimuApi.Connection[])">
+            <summary>
+            Creates a IMU logger. 
+            </summary>
+            <param name="loggerSettings">Settings for the logger.</param>
+            <param name="connections">IMU connections that is the source of messages to be logged.</param>
+        </member>
+        <member name="M:NgimuApi.Logging.SessionLogger.Start">
+            <summary>
+            Start logging. 
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Logging.SessionLogger.Stop">
+            <summary>
+            Stop logging, disposes the logger and finalises all files. 
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Logging.SessionLogger.Dispose">
+            <summary>
+            Dispose the logger and finalise all files. 
+            </summary>
+        </member>
+        <member name="T:NgimuApi.Logging.SessionSettings">
+            <summary>
+            Logging settings are used to configure ImuLogger instances. 
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Logging.SessionSettings.RootDirectory">
+            <summary>
+            Gets or sets the root directory path. 
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Logging.SessionSettings.SessionName">
+            <summary>
+            Gets or sets the session directory name. This maybe the original file name if this logging session is from a file.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Logging.SessionSettings.LoggingPeriod">
+            <summary>
+            Gets or sets the desired logging period in seconds. 
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Logging.SessionSettings.#ctor">
+            <summary>
+            Creates an instance using the default values.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Logging.SessionSettings.CreateForFile(System.IO.FileInfo)">
+            <summary>
+            Helper method to create logger settings for the contents of a file. 
+            </summary>
+            <param name="file">The file that contains OSC messages in SLIP format.</param>
+            <returns>Logger settings that will read from a file.</returns>
+        </member>
+        <member name="M:NgimuApi.Logging.SessionSettings.CreateForFileAndPath(System.String,System.IO.FileInfo)">
+            <summary>
+            Helper method to create logger settings for the contents of a file. 
+            </summary>
+            <param name="rootDirectory">Destination root directory.</param>
+            <param name="file">The file that contains OSC messages in SLIP format.</param>
+            <returns>Logger settings that will read from a file.</returns>
+        </member>
+        <member name="T:NgimuApi.CommunicationProcessResult">
+            <summary>
+            Communication process result / state
+            </summary>
+        </member>
+        <member name="F:NgimuApi.CommunicationProcessResult.Running">
+            <summary>
+            The communication process is running.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.CommunicationProcessResult.Success">
+            <summary>
+            The communication process completed successfully.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.CommunicationProcessResult.ConnectionError">
+            <summary>
+            The communication process could not complete because there was an error with the connection.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.CommunicationProcessResult.RetryLimitExceeded">
+            <summary>
+            The communication process could not complete because the retry limit was exceeded.
+            </summary>
+        </member>
+        <member name="T:NgimuApi.CommunicationProcess">
+            <summary>
+            Communication process.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.CommunicationProcess.AllCallbacks">
+            <summary>
+            All the callbacks in this process.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.CommunicationProcess.RemainingCallbacks">
+            <summary>
+            The callbacks that are remaining.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.CommunicationProcess.IsRunning">
+            <summary>
+            True if the process is running.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.CommunicationProcess.Connection">
+            <summary>
+            Gets the connection to be used.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.CommunicationProcess.Remaining">
+            <summary>
+            Gets the number of callbacks that have not been completed.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.CommunicationProcess.RetryLimit">
+            <summary>
+            Gets the maximum number of retries before failure.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.CommunicationProcess.Timeout">
+            <summary>
+            Gets the time out in milliseconds between each process iteration. 
+            </summary>
+        </member>
+        <member name="P:NgimuApi.CommunicationProcess.Result">
+            <summary>
+            Gets the result of the asynchronous process.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.CommunicationProcess.Reporter">
+            <summary>
+            Gets the reporter for this process.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.CommunicationProcess.#ctor(NgimuApi.Connection,NgimuApi.IReporter,NgimuApi.ISettingValue,System.Int32,System.Int32)">
+            <summary>
+            Create an communication process.
+            </summary>
+            <param name="comms">An Connection to be used for communication.</param>
+            <param name="reporter">Progress reporter.</param>
+            <param name="callback">Callback callback to be processed.</param>
+            <param name="timeout">Time out in milliseconds between each process iteration.</param>
+            <param name="retryLimit">The maximum number of retries before failure.</param>
+        </member>
+        <member name="M:NgimuApi.CommunicationProcess.#ctor(NgimuApi.Connection,NgimuApi.IReporter,System.Collections.Generic.IEnumerable{NgimuApi.ISettingValue},System.Int32,System.Int32)">
+            <summary>
+            Create an communication process.
+            </summary>
+            <param name="comms">An Connection to be used for communication.</param>
+            <param name="reporter">Progress reporter.</param>
+            <param name="callbacks">Callbacks to be processed.</param>
+            <param name="timeout">Time out in milliseconds between each process iteration.</param>
+            <param name="retryLimit">The maximum number of retries before failure.</param>
+        </member>
+        <member name="M:NgimuApi.CommunicationProcess.RunAsync">
+            <summary>
+            Start the asynchronous communication process.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.CommunicationProcess.Run">
+            <summary>
+            Run the communication process synchronised and return the result immediately.
+            </summary>
+            <returns>The result of the process</returns>
+        </member>
+        <member name="M:NgimuApi.CommunicationProcess.Stop">
+            <summary>
+            Stop asynchronous communication process as soon as possible.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.CommunicationProcess.AsynchronousProcessThread">
+            <summary>
+            Run the asynchronous communication process thread. 
+            </summary>
+        </member>
+        <member name="M:NgimuApi.CommunicationProcess.SendMessage(Rug.Osc.OscMessage)">
+            <summary>
+            Send a OSC callback to the remote.
+            </summary>
+            <param name="message">An OSC callback.</param>
+            <returns>True of the callback was sent.</returns>
+        </member>
+        <member name="M:NgimuApi.CommunicationProcess.SetupCallback(NgimuApi.ISettingValue)">
+            <summary>
+            Setup a single callback, this method is called for each callback prior to the start of the process. 
+            Inheriting classes should implement this method for the type of callback that is used.
+            </summary>
+            <param name="callback">A callback object.</param>
+            <returns>True if the callback should be included in the process.</returns>
+        </member>
+        <member name="M:NgimuApi.CommunicationProcess.GetMessageFor(NgimuApi.ISettingValue)">
+            <summary>
+            Get an OSC callback for a callback object this callback is the one sent to the remote.
+            Inheriting classes should implement this method for the type of callback that is used.
+            </summary>
+            <param name="callback">A callback object.</param>
+            <returns>The OSC callback to be sent.</returns>
+        </member>
+        <member name="M:NgimuApi.CommunicationProcess.OnStop">
+            <summary>
+            Called when the process has stopped.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.CommunicationProcess.OnBegin">
+            <summary>
+            Called when the process begins.
+            </summary>
+            <returns>True if the process should continue.</returns>
+        </member>
+        <member name="M:NgimuApi.CommunicationProcess.OnEnd">
+            <summary>
+            Called when the process ends.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.CommunicationProcess.OnInfo(System.String)">
+            <summary>
+            Called when there is info to display. 
+            </summary>
+            <param name="message">A textual message.</param>
+        </member>
+        <member name="M:NgimuApi.CommunicationProcess.OnError(System.String)">
+            <summary>
+            Called when an error occurs.
+            </summary>
+            <param name="message">A textual message.</param>
+        </member>
+        <member name="M:NgimuApi.CommunicationProcess.OnError(System.String,System.String)">
+            <summary>
+            Called when an error occurs.
+            </summary>
+            <param name="message">A textual message.</param>
+            <param name="detail">Additional detail about the error.</param>
+        </member>
+        <member name="T:NgimuApi.IConnectionInfo">
+            <summary>
+            Types that implement this interface can be used to establish a connection.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.IConnectionInfo.ToIDString">
+            <summary>
+            The ID to use as a unique key.
+            </summary>
+            <returns>A unique key string.</returns>
+        </member>
+        <member name="T:NgimuApi.Commands">
+            <summary>
+            Static collection of commands.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Commands.ContainsAddress(System.String)">
+            <summary>
+            Does this collection contain a command with a given OSC address.
+            </summary>
+            <param name="oscAddress">The OSC address to check.</param>
+            <returns>True if a command with the supplied address exists in this collection.</returns>
+        </member>
+        <member name="M:NgimuApi.Commands.Send(NgimuApi.Connection,NgimuApi.Command)">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="connection">The connection to use.</param>
+            <param name="command">Command.</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.Commands.Send(NgimuApi.Connection,NgimuApi.Command,System.Object[])">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="connection">The connection to use.</param>
+            <param name="command">Command.</param>
+            <param name="args">OSC message arguments</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.Commands.Send(NgimuApi.Connection,NgimuApi.IReporter,NgimuApi.Command)">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="connection">The connection to use.</param>
+            <param name="reporter">Progress reporter.</param>
+            <param name="command">Command.</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.Commands.Send(NgimuApi.Connection,NgimuApi.IReporter,NgimuApi.Command,System.Object[])">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="connection">The connection to use.</param>
+            <param name="reporter">Progress reporter.</param>
+            <param name="command">Command.</param>
+            <param name="args">OSC message arguments</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.Commands.Send``1(NgimuApi.Connection,NgimuApi.Command,``0@)">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="connection">The connection to use.</param>
+            <param name="command">Command.</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.Commands.Send``1(NgimuApi.Connection,NgimuApi.Command,``0@,System.Object[])">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="connection">The connection to use.</param>
+            <param name="command">Command.</param>
+            <param name="args">OSC message arguments</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.Commands.Send``1(NgimuApi.Connection,NgimuApi.IReporter,NgimuApi.Command,``0@)">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="connection">The connection to use.</param>
+            <param name="reporter">Progress reporter.</param>
+            <param name="command">Command.</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.Commands.Send``1(NgimuApi.Connection,NgimuApi.IReporter,NgimuApi.Command,``0@,System.Object[])">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="connection">The connection to use.</param>
+            <param name="reporter">Progress reporter.</param>
+            <param name="command">Command.</param>
+            <param name="args">OSC message arguments</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.Commands.Send(NgimuApi.Connection,NgimuApi.Command,System.Int32,System.Int32)">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="connection">The connection to use</param>
+            <param name="command">Command.</param>
+            <param name="timeout">The timeout in milliseconds.</param>
+            <param name="retryLimit">The number of retries to try before aborting.</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.Commands.Send(NgimuApi.Connection,NgimuApi.Command,System.Int32,System.Int32,System.Object[])">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="connection">The connection to use</param>
+            <param name="command">Command.</param>
+            <param name="timeout">The timeout in milliseconds.</param>
+            <param name="retryLimit">The number of retries to try before aborting.</param>
+            <param name="args">OSC message arguments</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.Commands.Send(NgimuApi.Connection,NgimuApi.IReporter,NgimuApi.Command,System.Int32,System.Int32)">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="connection">The connection to use</param>
+            <param name="reporter">Progress reporter.</param>
+            <param name="command">Command.</param>
+            <param name="timeout">The timeout in milliseconds.</param>
+            <param name="retryLimit">The number of retries to try before aborting.</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.Commands.Send(NgimuApi.Connection,NgimuApi.IReporter,NgimuApi.Command,System.Int32,System.Int32,System.Object[])">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="connection">The connection to use</param>
+            <param name="reporter">Progress reporter.</param>
+            <param name="command">Command.</param>
+            <param name="timeout">The timeout in milliseconds.</param>
+            <param name="retryLimit">The number of retries to try before aborting.</param>
+            <param name="args">OSC message arguments</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.Commands.Send``1(NgimuApi.Connection,NgimuApi.Command,System.Int32,System.Int32,``0@)">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="connection">The connection to use</param>
+            <param name="command">Command.</param>
+            <param name="timeout">The timeout in milliseconds.</param>
+            <param name="retryLimit">The number of retries to try before aborting.</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.Commands.Send``1(NgimuApi.Connection,NgimuApi.Command,System.Int32,System.Int32,``0@,System.Object[])">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="connection">The connection to use</param>
+            <param name="command">Command.</param>
+            <param name="timeout">The timeout in milliseconds.</param>
+            <param name="retryLimit">The number of retries to try before aborting.</param>
+            <param name="args">OSC message arguments</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.Commands.Send``1(NgimuApi.Connection,NgimuApi.IReporter,NgimuApi.Command,System.Int32,System.Int32,``0@)">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="connection">The connection to use</param>
+            <param name="reporter">Progress reporter.</param>
+            <param name="command">Command.</param>
+            <param name="timeout">The timeout in milliseconds.</param>
+            <param name="retryLimit">The number of retries to try before aborting.</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.Commands.Send``1(NgimuApi.Connection,NgimuApi.IReporter,NgimuApi.Command,System.Int32,System.Int32,``0@,System.Object[])">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="connection">The connection to use</param>
+            <param name="reporter">Progress reporter.</param>
+            <param name="command">Command.</param>
+            <param name="timeout">The timeout in milliseconds.</param>
+            <param name="retryLimit">The number of retries to try before aborting.</param>
+            <param name="args">OSC message arguments</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="P:NgimuApi.Commands.CommandEnumerator.Item(System.Int32)">
+            <summary>
+            Gets commands by index.
+            </summary>
+            <param name="index">The zero based index of a command.</param>
+            <returns>A command.</returns>
+        </member>
+        <member name="P:NgimuApi.Commands.CommandEnumerator.Count">
+            <summary>
+            Gets the number of commands in this collection.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Commands.CommandEnumerator.GetEnumerator">
+            <summary>
+            Enumerate all commands in this collection.
+            </summary>
+            <returns>An enumerator for all the commands in this collection.</returns>
+        </member>
+        <member name="M:NgimuApi.Commands.CommandEnumerator.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Enumerate all commands in this collection.
+            </summary>
+            <returns>An enumerator for all the commands in this collection.</returns>
+        </member>
+        <member name="T:NgimuApi.Connection">
+            <summary>
+            Connection to a IMU
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Connection.EnumerateConnections">
+            <summary>
+            Enumerate all available connections. Note: This method blocks until connections have been enumerated.
+            </summary>
+            <returns>All available connections.</returns>
+        </member>
+        <member name="E:NgimuApi.Connection.UnknownAddress">
+            <summary>
+            Occurs when an unknown OSC address is encountered.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Connection.CommunicationStatistics">
+            <summary>
+            Communication statistics.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Connection.ID">
+            <summary>
+            A ID derived for the unique key of the connection info.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Connection.Tag">
+            <summary>
+            User object.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Connection.ConnectionInfo">
+            <summary>
+            Get the connection info used to create this connection.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Connection.ConnectionType">
+            <summary>
+            Gets the type of connection.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Connection.IsConnected">
+            <summary>
+            Gets a flag indicating if the connection is open.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Connection.Name">
+            <summary>
+            Gets the human friendly name of this connection.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Connection.Button">
+            <summary>
+            Gets the most recent button data received from the device.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Connection.Sensors">
+            <summary>
+            Gets the most recent XXX data received from the device.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Connection.Quaternion">
+            <summary>
+            Gets the most recent quaternion data received from the device.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Connection.RotationMatrix">
+            <summary>
+            Gets the most recent rotation matrix data received from the device.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Connection.EulerAngles">
+            <summary>
+            Gets the most recent Euler angle data received from the device.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Connection.LinearAcceleration">
+            <summary>
+            Gets the most recent linear acceleration data received from the device.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Connection.Magnitudes">
+            <summary>
+            Gets the most recent magnitudes data received from the device.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Connection.EarthAcceleration">
+            <summary>
+            Gets the most recent Earth acceleration data received from the device.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Connection.Altitude">
+            <summary>
+            Gets the most recent altitude data received from the device.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Connection.Temperature">
+            <summary>
+            Gets the most recent temperature data received from the device.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Connection.Humidity">
+            <summary>
+            Gets the most recent humidity data received from the device.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Connection.Battery">
+            <summary>
+            Gets the most recent battery data received from the device.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Connection.AnalogueInputs">
+            <summary>
+            Gets the most recent analogue input data received from the device.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Connection.Rssi">
+            <summary>
+            Gets the most recent RSSI data received from the device.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Connection.AuxiliarySerial">
+            <summary>
+            Gets the most recent auxiliary serial data received from the device.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Connection.AuxiliarySerialCts">
+            <summary>
+            Gets the most recent auxiliary serial CTS data received from the device.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Connection.SerialCts">
+            <summary>
+            Gets the most recent serial CTS data received from the device.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Connection.DeviceError">
+            <summary>
+            Gets the last error message received from the device.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Connection.Settings">
+            <summary>
+            Gets the device settings.
+            </summary>
+        </member>
+        <member name="E:NgimuApi.Connection.Connected">
+            <summary>
+            Occurs when a connection has been made.
+            </summary>
+        </member>
+        <member name="E:NgimuApi.Connection.Disconnected">
+            <summary>
+            Occurs when the connection is disconnected.
+            </summary>
+        </member>
+        <member name="E:NgimuApi.Connection.Exception">
+            <summary>
+            Occurs when an internal exception is thrown.
+            </summary>
+        </member>
+        <member name="E:NgimuApi.Connection.Error">
+            <summary>
+            Occurs when an non-exception error is encountered.
+            </summary>
+        </member>
+        <member name="E:NgimuApi.Connection.Info">
+            <summary>
+            Occurs when there is state info for the user.
+            </summary>
+        </member>
+        <member name="E:NgimuApi.Connection.Message">
+            <summary>
+            Occurs when a message is sent or received.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Connection.#ctor(NgimuApi.SearchForConnections.ConnectionSearchInfo)">
+            <summary>
+            Create a connection using the supplied auto connection info.
+            </summary>
+            <param name="connectionInfo">Auto connection info that describes the connection.</param>
+        </member>
+        <member name="M:NgimuApi.Connection.#ctor(NgimuApi.IConnectionInfo)">
+            <summary>
+            Create a connection using the supplied connection info.
+            </summary>
+            <param name="connectionInfo">Connection info that describes the connection.</param>
+        </member>
+        <member name="M:NgimuApi.Connection.CheckConnectionState">
+            <summary>
+            Force the connection to test itself.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Connection.Connect">
+            <summary>
+            Connect to the device.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Connection.Close">
+            <summary>
+            Close the connection.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Connection.Dispose">
+            <summary>
+            Dispose of all resources.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Connection.Send(Rug.Osc.OscPacket)">
+            <summary>
+            Send a OscPacket to the device.
+            </summary>
+            <param name="packet">A packet to be sent.</param>
+        </member>
+        <member name="M:NgimuApi.Connection.SendCommand(NgimuApi.Command)">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="command">Command.</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.Connection.SendCommand(NgimuApi.Command,System.Object[])">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="command">Command.</param>
+            <param name="args">OSC message arguments</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.Connection.SendCommand(NgimuApi.Command,System.Int32,System.Int32,System.Object[])">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="command">Command.</param>
+            <param name="timeout">The timeout.</param>
+            <param name="retryLimit">The retry limit.</param>
+            <param name="args">OSC message arguments</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.Connection.SendCommand(NgimuApi.IReporter,NgimuApi.Command)">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="reporter">Progress reporter.</param>
+            <param name="command">Command.</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.Connection.SendCommand(NgimuApi.IReporter,NgimuApi.Command,System.Object[])">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="reporter">Progress reporter.</param>
+            <param name="command">Command.</param>
+            <param name="args">OSC message arguments</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.Connection.SendCommand``1(NgimuApi.Command,``0@)">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="command">Command.</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.Connection.SendCommand``1(NgimuApi.Command,``0@,System.Object[])">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="command">Command.</param>
+            <param name="args">OSC message arguments</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.Connection.SendCommand``1(NgimuApi.IReporter,NgimuApi.Command,``0@)">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="reporter">Progress reporter.</param>
+            <param name="command">Command.</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.Connection.SendCommand``1(NgimuApi.IReporter,NgimuApi.Command,``0@,System.Object[])">
+            <summary>
+            Process a single command synchronously. Note: This method will block until the process is complete.
+            </summary>
+            <param name="reporter">Progress reporter.</param>
+            <param name="command">Command.</param>
+            <param name="args">OSC message arguments</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:NgimuApi.Connection.Attach(System.String,Rug.Osc.OscMessageEvent)">
+            <summary>
+            Attach an event listener on to the given address.
+            </summary>
+            <param name="address">The address of the container.</param>
+            <param name="event">The event to attach.</param>
+        </member>
+        <member name="M:NgimuApi.Connection.Detach(System.String,Rug.Osc.OscMessageEvent)">
+            <summary>
+            Detach an event listener.
+            </summary>
+            <param name="address">The address of the container.</param>
+            <param name="event">The event to remove.</param>
+        </member>
+        <member name="M:NgimuApi.Connection.ConfigureUniqueUdpConnection(NgimuApi.UdpConnectionInfo,NgimuApi.IReporter,System.Int32,System.Int32)">
+            <summary>
+            Configures the unique UDP connection.
+            </summary>
+            <param name="connectionInfo">The connection information.</param>
+            <param name="reporter">The reporter.</param>
+            <param name="timeout">The timeout in milliseconds.</param>
+            <param name="retryLimit">The retry limit.</param>
+            <returns>UdpConnectionInfo.</returns>
+            <exception cref="T:System.Exception">Device send IP address and/or port could not be configured for unique connection.</exception>
+            <autogeneratedoc />
+            <remarks>
+            The device may not respond for up to 5 seconds. The total retry period must therefore be greater than 5 seconds. 
+            </remarks>
+        </member>
+        <member name="T:NgimuApi.Maths.EulerAngles">
+            <summary>
+            Euler angles (in degrees).  The Euler angles are in the Aerospace sequence also known as the ZYX sequence.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.EulerAngles.Zero">
+            <summary>
+            Euler angle values of zero.  Represents an alignment in orientation.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.EulerAngles.Roll">
+            <summary>
+            Roll angle (rotation around x axis) in degrees.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.EulerAngles.Pitch">
+            <summary>
+            Pitch angle (rotation around y axis) in degrees.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.EulerAngles.Yaw">
+            <summary>
+            Yaw angle (rotation around z axis) in degrees.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Maths.EulerAngles.Item(System.Int32)">
+            <summary>
+            Gets or sets the Euler angles by index.  The element order is: roll, pitch, yaw.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Maths.EulerAngles.#ctor(System.Single,System.Single,System.Single)">
+            <summary>
+            Creates Euler angles from individual angles.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Maths.EulerAngles.#ctor(System.Single[])">
+            <summary>
+            Creates Euler angles from an array.  The element order is: roll, pitch, yaw.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Maths.EulerAngles.RadiansToDegrees(System.Single)">
+            <summary>
+            Converts from radians to degrees.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Maths.EulerAngles.DegreesToRadians(System.Single)">
+            <summary>
+            Converts from degrees to radians.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Maths.EulerAngles.ToString">
+            <summary>
+            Converts the numeric value of this instance to its equivalent string representation.
+            </summary>
+            <returns> The string representation of the value of this instance.</returns>
+        </member>
+        <member name="T:NgimuApi.Maths.RotationMatrix">
+            <summary>
+            Rotation matrix in row-major order.
+            <see href="http://en.wikipedia.org/wiki/Row-major_order"/>
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.RotationMatrix.Identity">
+            <summary>
+            Rotation matrix identity.  Represents an alignment in orientation.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.RotationMatrix.XX">
+            <summary>
+            Rotation matrix xx element.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.RotationMatrix.XY">
+            <summary>
+            Rotation matrix xy element.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.RotationMatrix.XZ">
+            <summary>
+            Rotation matrix xz element.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.RotationMatrix.YX">
+            <summary>
+            Rotation matrix yx element.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.RotationMatrix.YY">
+            <summary>
+            Rotation matrix yy element.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.RotationMatrix.YZ">
+            <summary>
+            Rotation matrix yz element.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.RotationMatrix.ZX">
+            <summary>
+            Rotation matrix zx element.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.RotationMatrix.ZY">
+            <summary>
+            Rotation matrix zy element.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.RotationMatrix.ZZ">
+            <summary>
+            Rotation matrix zz element.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Maths.RotationMatrix.Item(System.Int32)">
+            <summary>
+            Gets or sets the rotation matrix element by index.  The element order is: xx, xy, xz, yx, yy, yz, zx, zy, zz.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Maths.RotationMatrix.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Creates a rotation matrix from individual elements.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Maths.RotationMatrix.#ctor(System.Single[])">
+            <summary>
+            Creates a rotation matrix from an array.  The element order is: xx, xy, xz, yx, yy, yz, zx, zy, zz.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Maths.RotationMatrix.ToString">
+            <summary>
+            Converts the numeric value of this instance to its equivalent string representation.
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="T:NgimuApi.Maths.Vector3">
+            <summary>
+            Three-dimensional vector.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.Vector3.Zero">
+            <summary>
+            Vector value of zero.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.Vector3.One">
+            <summary>
+            Vector value of one.  Each element value is one;
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.Vector3.UnitX">
+            <summary>
+            Unit vector in x direction.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.Vector3.UnitY">
+            <summary>
+            Unit vector in y direction.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.Vector3.UnitZ">
+            <summary>
+            Unit vector in z direction.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.Vector3.X">
+            <summary>
+            Vector x element.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.Vector3.Y">
+            <summary>
+            Vector y element.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.Vector3.Z">
+            <summary>
+            Vector z element.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Maths.Vector3.#ctor(System.Single,System.Single,System.Single)">
+            <summary>
+            Creates a vector from individual elements.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Maths.Vector3.#ctor(System.Single[])">
+            <summary>
+            Creates vector from an array.  The element order is: x, y, z.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Maths.Vector3.ToString">
+            <summary>
+            Converts the numeric value of this instance to its equivalent string representation.
+            </summary>
+            <returns>The string representation of the value of this instance. </returns>
+        </member>
+        <member name="T:NgimuApi.Maths.Quaternion">
+            <summary>
+            Quaternion.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.Quaternion.Identity">
+            <summary>
+            Quaternion identity.  Represents an alignment in orientation.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.Quaternion.W">
+            <summary>
+            Quaternion w element.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.Quaternion.X">
+            <summary>
+            Quaternion x element.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.Quaternion.Y">
+            <summary>
+            Quaternion y element.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.Maths.Quaternion.Z">
+            <summary>
+            Quaternion z element.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Maths.Quaternion.Item(System.Int32)">
+            <summary>
+            Gets or sets the quaternion element by index.  The element order is: w, x, y, z.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Maths.Quaternion.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Creates a quaternion from individual elements.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Maths.Quaternion.#ctor(System.Single[])">
+            <summary>
+            Creates a quaternion from an array.  The element order is: w, x, y, z.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Maths.Quaternion.Conjugate">
+            <summary>
+            Returns the quaternion conjugate.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Maths.Quaternion.Equals(NgimuApi.Maths.Quaternion)">
+            <summary>
+            Returns true if the numeric value of this instance is equal to the other quaternion.
+            </summary>
+            <param name="other">The other quaternion to be compared.</param>
+            <returns>True if the numeric value of this instance is equal to the other quaternion.</returns>
+        </member>
+        <member name="M:NgimuApi.Maths.Quaternion.Normalise(NgimuApi.Maths.Quaternion)">
+            <summary>
+            Normalises a quaternion.
+            </summary>
+            <param name="quaternion">Quaternion to be normalised.</param>
+            <returns>Normalised quaternion.</returns>
+        </member>
+        <member name="M:NgimuApi.Maths.Quaternion.ToRotationMatrix(NgimuApi.Maths.Quaternion)">
+            <summary>
+            Converts a quaternion to a rotation matrix.
+            </summary>
+            <param name="quaternion">Quaternion to be converted.</param>
+            <returns>Rotation matrix representation of the quaternion. </returns>
+        </member>
+        <member name="M:NgimuApi.Maths.Quaternion.FromRotationMatrix(NgimuApi.Maths.RotationMatrix)">
+            <summary>
+            Converts a rotation matrix to a quaternion.
+            <see href="http://www.euclideanspace.com/maths/geometry/rotations/conversions/matrixToQuaternion/"/>
+            </summary>
+            <param name="rotationMatrix">Rotation matrix to be converted. </param>
+            <returns>Quaternion representation of the rotation matrix.</returns>
+        </member>
+        <member name="M:NgimuApi.Maths.Quaternion.ToEulerAngles(NgimuApi.Maths.Quaternion)">
+            <summary>
+            Converts a quaternion to Euler angles (in degrees).
+            </summary>
+            <param name="quaternion">Quaternion to be converted.</param>
+            <returns>Euler angles (in degrees) representation of the quaternion.</returns>
+        </member>
+        <member name="M:NgimuApi.Maths.Quaternion.FromEulerAngles(NgimuApi.Maths.EulerAngles)">
+            <summary>
+            Converts Euler angles (in degrees) to a quaternion.
+            <see href="http://www.euclideanspace.com/maths/geometry/rotations/conversions/eulerToQuaternion/index.htm"/>
+            </summary>
+            <param name="eulerAngles">Euler angles (in degrees) to be converted.</param>
+            <returns>Quaternion representation of the Euler angles (in degrees).</returns>
+        </member>
+        <member name="M:NgimuApi.Maths.Quaternion.ToString">
+            <summary>
+            Converts the numeric value of this instance to its equivalent string representation.
+            </summary>
+            <returns>The string representation of the value of this instance. </returns>
+        </member>
+        <member name="P:NgimuApi.Settings.Connection">
+            <summary>
+            Gets the Connection that this setting category is bound to or null if it is unbound.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.Text">
+            <summary>
+            Gets the category text including the full path from the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.CategoryPrefix">
+            <summary>
+            Gets the category prefix text.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.Parent">
+            <summary>
+            Gets the parent category of this category or null if this category is the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.IsHidden">
+            <summary>
+            Gets a flag to indicate if this category is hidden.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.Calibration">
+            <summary>
+            Gets Calibration Parameters settings category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.DeviceInformation">
+            <summary>
+            Gets Device Information settings category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.Wifi">
+            <summary>
+            Gets Wi-Fi settings category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.Serial">
+            <summary>
+            Gets Serial settings category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SDCard">
+            <summary>
+            Gets SD Card settings category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.Ahrs">
+            <summary>
+            Gets AHRS settings category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SendRates">
+            <summary>
+            Gets Send Rates settings category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.AuxiliarySerial">
+            <summary>
+            Gets Auxiliary Serial settings category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.PowerManagement">
+            <summary>
+            Gets Power Management settings category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.CrystalTrim">
+            <summary>
+            Gets Crystal Trim setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.GyroscopeMisalignment">
+            <summary>
+            Gets Gyroscope Misalignment setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.GyroscopeSensitivity">
+            <summary>
+            Gets Gyroscope Sensitivity setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.GyroscopeBias">
+            <summary>
+            Gets Gyroscope Bias setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.AccelerometerMisalignment">
+            <summary>
+            Gets Accelerometer Misalignment setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.AccelerometerSensitivity">
+            <summary>
+            Gets Accelerometer Sensitivity setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.AccelerometerBias">
+            <summary>
+            Gets Accelerometer Bias setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SoftIronMatrix">
+            <summary>
+            Gets Soft Iron Matrix setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.HardIronBias">
+            <summary>
+            Gets Hard Iron Bias setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.CalibrationDate">
+            <summary>
+            Gets Calibration Date setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.CalibrationTemperature">
+            <summary>
+            Gets Calibration Temperature setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.DeviceName">
+            <summary>
+            Gets Device Name setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SerialNumber">
+            <summary>
+            Gets Serial Number setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.FirmwareVersion">
+            <summary>
+            Gets Firmware Version setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.BootloaderVersion">
+            <summary>
+            Gets Bootloader Version setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.HardwareVersion">
+            <summary>
+            Gets Hardware Version setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.WifiEnabled">
+            <summary>
+            Gets Wi-Fi Enabled setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.WifiFirmwareVersion">
+            <summary>
+            Gets Wi-Fi Firmware Version setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.WifiMacAddress">
+            <summary>
+            Gets Wi-Fi MAC Address setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.WifiIPAddress">
+            <summary>
+            Gets Wi-Fi IP Address setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.WifiMode">
+            <summary>
+            Gets Wi-Fi Mode setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.WifiAntenna">
+            <summary>
+            Gets Wi-Fi Antenna setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.WifiRegion">
+            <summary>
+            Gets Wi-Fi Region setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.WifiAPBand">
+            <summary>
+            Gets Wi-Fi AP Band setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.WifiAP2GHzChannel">
+            <summary>
+            Gets Wi-Fi AP 2.4 GHz Channel setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.WifiAP5GHzChannel">
+            <summary>
+            Gets Wi-Fi AP 5 GHz Channel setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.WifiClientSSID">
+            <summary>
+            Gets Wi-Fi Client SSID setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.WifiClientKey">
+            <summary>
+            Gets Wi-Fi Client Key setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.WifiClientDhcpEnabled">
+            <summary>
+            Gets Wi-Fi Client DHCP Enabled setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.WifiClientIPAddress">
+            <summary>
+            Gets Wi-Fi Client IP Address setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.WifiClientSubnet">
+            <summary>
+            Gets Wi-Fi Client Subnet setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.WifiClientGateway">
+            <summary>
+            Gets Wi-Fi Client Gateway setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.WifiClientLowPower">
+            <summary>
+            Gets Wi-Fi Client SSIDLow Power Mode setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.WifiSendIPAddress">
+            <summary>
+            Gets UDP Send IP Address setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.WifiSendPort">
+            <summary>
+            Gets UDP Send Port setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.WifiReceivePort">
+            <summary>
+            Gets UDP Receive Port setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.WifiMaximiseThroughput">
+            <summary>
+            Gets UDP Maximise Throughput setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SynchronisationMasterEnabled">
+            <summary>
+            Gets Synchronisation Master Enabled setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SynchronisationMasterPort">
+            <summary>
+            Gets Synchronisation Master Send Port setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SerialEnabled">
+            <summary>
+            Gets Serial Enabled setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SerialBaudRate">
+            <summary>
+            Gets Serial Baud Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SerialBaudRateError">
+            <summary>
+            Gets Serial Baud Rate Error setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SerialRtsCtsEnabled">
+            <summary>
+            Gets Serial RTS/CTS Enabled setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SerialInvertDataLines">
+            <summary>
+            Gets Serial Invert Data Lines setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.sdCardFileNamePrefix">
+            <summary>
+            Gets SD Card File Name Prefix setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.sdCardFileNumber">
+            <summary>
+            Gets SD Card File Number setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.sdCardMaxFileSize">
+            <summary>
+            Gets SD Card Maximum File Size setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.sdCardMaxFilePeriod">
+            <summary>
+            Gets SD Card Maximum File Period setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.AhrsGain">
+            <summary>
+            Gets AHRS Gain setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.AhrsGyroscopeBiasCorrection">
+            <summary>
+            Gets AHRS Gyroscope Bias Correction setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.AhrsIgnoreMagnetometer">
+            <summary>
+            Gets AHRS Ignore Magnetometer setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.AhrsMinimumMagneticField">
+            <summary>
+            Gets AHRS Minimum Magnetic Field setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.AhrsMaximumMagneticField">
+            <summary>
+            Gets AHRS Maximum Magnetic Field setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SendRateSensors">
+            <summary>
+            Gets Sensors Send Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SendRateMagnitudes">
+            <summary>
+            Gets Magnitudes Send Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SendRateQuaternion">
+            <summary>
+            Gets Quaternion Send Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SendRateRotationMatrix">
+            <summary>
+            Gets Rotation Matrix Send Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SendRateEulerAngles">
+            <summary>
+            Gets Euler Angles Send Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SendRateLinearAcceleration">
+            <summary>
+            Gets Linear Acceleration Send Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SendRateEarthAcceleration">
+            <summary>
+            Gets Earth Acceleration Send Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SendRateAltitude">
+            <summary>
+            Gets Altitude Send Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SendRateTemperature">
+            <summary>
+            Gets Temperature Send Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SendRateHumidity">
+            <summary>
+            Gets Humidity Send Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SendRateBattery">
+            <summary>
+            Gets Battery Send Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SendRateAnalogueInputs">
+            <summary>
+            Gets Analogue Inputs Send Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SendRateRssi">
+            <summary>
+            Gets RSSI Send Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.AuxSerialEnabled">
+            <summary>
+            Gets Auxiliary Serial Enabled setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.AuxSerialBaudRate">
+            <summary>
+            Gets Auxiliary Serial Baud Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.AuxSerialBaudRateError">
+            <summary>
+            Gets Auxiliary Serial Baud Rate Error setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.AuxSerialRtsCtsEnabled">
+            <summary>
+            Gets Auxiliary Serial RTS/CTS Enabled setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.AuxSerialInvertDataLines">
+            <summary>
+            Gets Auxiliary Serial Invert Data Lines setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.AuxSerialOscPassthrough">
+            <summary>
+            Gets Auxiliary Serial OSC Passthrough setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.AuxSerialSendAsString">
+            <summary>
+            Gets Auxiliary Serial Send As String setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.AuxSerialBufferSize">
+            <summary>
+            Gets Auxiliary Serial Send Buffer Size setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.AuxSerialTimeout">
+            <summary>
+            Gets Auxiliary Serial Send Timeout setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.AuxSerialFramingCharacter">
+            <summary>
+            Gets Auxiliary Serial Send Framing Character setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.CpuIdleMode">
+            <summary>
+            Gets CPU Idle Mode setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.LedsEnabled">
+            <summary>
+            Gets LEDs Enabled setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.UsbExternalCurrentLimit">
+            <summary>
+            Gets USB/External Current Limit setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SleepTimer">
+            <summary>
+            Gets Sleep Timer setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.WakeupTimer">
+            <summary>
+            Gets Wakeup Timer setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.MotionTriggerWakeup">
+            <summary>
+            Gets Motion Trigger Wakeup setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.MutedOnStartup">
+            <summary>
+            Gets Muted On Startup setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.BatteryMinimumVoltage">
+            <summary>
+            Gets Battery Minimum Voltage setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.BatteryCapacity">
+            <summary>
+            Gets Battery Capacity setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.BatteryHealth">
+            <summary>
+            Gets Battery Health setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.BatteryChargeDischargeCycles">
+            <summary>
+            Gets Battery Charge/Discharge Cycles setting.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Settings.CopyTo(NgimuApi.Settings)">
+            <summary>
+            Copy the values of all the settings in this category to another
+            </summary>
+            <param name="other">Another category</param>
+        </member>
+        <member name="T:NgimuApi.SettingsCategoryTypes">
+            <summary>
+            Contains all concrete category types.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Calibration.Connection">
+            <summary>
+            Gets the Connection that this setting category is bound to or null if it is unbound.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Calibration.Text">
+            <summary>
+            Gets the category text including the full path from the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Calibration.CategoryPrefix">
+            <summary>
+            Gets the category prefix text.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Calibration.Parent">
+            <summary>
+            Gets the parent category of this category or null if this category is the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Calibration.IsHidden">
+            <summary>
+            Gets a flag to indicate if this category is hidden.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Calibration.CrystalTrim">
+            <summary>
+            Gets Crystal Trim setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Calibration.GyroscopeMisalignment">
+            <summary>
+            Gets Gyroscope Misalignment setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Calibration.GyroscopeSensitivity">
+            <summary>
+            Gets Gyroscope Sensitivity setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Calibration.GyroscopeBias">
+            <summary>
+            Gets Gyroscope Bias setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Calibration.AccelerometerMisalignment">
+            <summary>
+            Gets Accelerometer Misalignment setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Calibration.AccelerometerSensitivity">
+            <summary>
+            Gets Accelerometer Sensitivity setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Calibration.AccelerometerBias">
+            <summary>
+            Gets Accelerometer Bias setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Calibration.SoftIronMatrix">
+            <summary>
+            Gets Soft Iron Matrix setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Calibration.HardIronBias">
+            <summary>
+            Gets Hard Iron Bias setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Calibration.CalibrationDate">
+            <summary>
+            Gets Calibration Date setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Calibration.CalibrationTemperature">
+            <summary>
+            Gets Calibration Temperature setting.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SettingsCategoryTypes.Calibration.CopyTo(NgimuApi.SettingsCategoryTypes.Calibration)">
+            <summary>
+            Copy the values of all the settings in this category to another
+            </summary>
+            <param name="other">Another category</param>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.DeviceInformation.Connection">
+            <summary>
+            Gets the Connection that this setting category is bound to or null if it is unbound.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.DeviceInformation.Text">
+            <summary>
+            Gets the category text including the full path from the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.DeviceInformation.CategoryPrefix">
+            <summary>
+            Gets the category prefix text.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.DeviceInformation.Parent">
+            <summary>
+            Gets the parent category of this category or null if this category is the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.DeviceInformation.IsHidden">
+            <summary>
+            Gets a flag to indicate if this category is hidden.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.DeviceInformation.DeviceName">
+            <summary>
+            Gets Device Name setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.DeviceInformation.SerialNumber">
+            <summary>
+            Gets Serial Number setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.DeviceInformation.FirmwareVersion">
+            <summary>
+            Gets Firmware Version setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.DeviceInformation.BootloaderVersion">
+            <summary>
+            Gets Bootloader Version setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.DeviceInformation.HardwareVersion">
+            <summary>
+            Gets Hardware Version setting.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SettingsCategoryTypes.DeviceInformation.CopyTo(NgimuApi.SettingsCategoryTypes.DeviceInformation)">
+            <summary>
+            Copy the values of all the settings in this category to another
+            </summary>
+            <param name="other">Another category</param>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.AP.Connection">
+            <summary>
+            Gets the Connection that this setting category is bound to or null if it is unbound.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.AP.Text">
+            <summary>
+            Gets the category text including the full path from the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.AP.CategoryPrefix">
+            <summary>
+            Gets the category prefix text.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.AP.Parent">
+            <summary>
+            Gets the parent category of this category or null if this category is the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.AP.IsHidden">
+            <summary>
+            Gets a flag to indicate if this category is hidden.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.AP.WifiAPBand">
+            <summary>
+            Gets Wi-Fi AP Band setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.AP.WifiAP2GHzChannel">
+            <summary>
+            Gets Wi-Fi AP 2.4 GHz Channel setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.AP.WifiAP5GHzChannel">
+            <summary>
+            Gets Wi-Fi AP 5 GHz Channel setting.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SettingsCategoryTypes.AP.CopyTo(NgimuApi.SettingsCategoryTypes.AP)">
+            <summary>
+            Copy the values of all the settings in this category to another
+            </summary>
+            <param name="other">Another category</param>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Client.Connection">
+            <summary>
+            Gets the Connection that this setting category is bound to or null if it is unbound.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Client.Text">
+            <summary>
+            Gets the category text including the full path from the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Client.CategoryPrefix">
+            <summary>
+            Gets the category prefix text.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Client.Parent">
+            <summary>
+            Gets the parent category of this category or null if this category is the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Client.IsHidden">
+            <summary>
+            Gets a flag to indicate if this category is hidden.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Client.WifiClientSSID">
+            <summary>
+            Gets Wi-Fi Client SSID setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Client.WifiClientKey">
+            <summary>
+            Gets Wi-Fi Client Key setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Client.WifiClientDhcpEnabled">
+            <summary>
+            Gets Wi-Fi Client DHCP Enabled setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Client.WifiClientIPAddress">
+            <summary>
+            Gets Wi-Fi Client IP Address setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Client.WifiClientSubnet">
+            <summary>
+            Gets Wi-Fi Client Subnet setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Client.WifiClientGateway">
+            <summary>
+            Gets Wi-Fi Client Gateway setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Client.WifiClientLowPower">
+            <summary>
+            Gets Wi-Fi Client SSIDLow Power Mode setting.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SettingsCategoryTypes.Client.CopyTo(NgimuApi.SettingsCategoryTypes.Client)">
+            <summary>
+            Copy the values of all the settings in this category to another
+            </summary>
+            <param name="other">Another category</param>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Udp.Connection">
+            <summary>
+            Gets the Connection that this setting category is bound to or null if it is unbound.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Udp.Text">
+            <summary>
+            Gets the category text including the full path from the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Udp.CategoryPrefix">
+            <summary>
+            Gets the category prefix text.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Udp.Parent">
+            <summary>
+            Gets the parent category of this category or null if this category is the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Udp.IsHidden">
+            <summary>
+            Gets a flag to indicate if this category is hidden.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Udp.WifiSendIPAddress">
+            <summary>
+            Gets UDP Send IP Address setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Udp.WifiSendPort">
+            <summary>
+            Gets UDP Send Port setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Udp.WifiReceivePort">
+            <summary>
+            Gets UDP Receive Port setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Udp.WifiMaximiseThroughput">
+            <summary>
+            Gets UDP Maximise Throughput setting.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SettingsCategoryTypes.Udp.CopyTo(NgimuApi.SettingsCategoryTypes.Udp)">
+            <summary>
+            Copy the values of all the settings in this category to another
+            </summary>
+            <param name="other">Another category</param>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SynchronisationMaster.Connection">
+            <summary>
+            Gets the Connection that this setting category is bound to or null if it is unbound.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SynchronisationMaster.Text">
+            <summary>
+            Gets the category text including the full path from the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SynchronisationMaster.CategoryPrefix">
+            <summary>
+            Gets the category prefix text.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SynchronisationMaster.Parent">
+            <summary>
+            Gets the parent category of this category or null if this category is the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SynchronisationMaster.IsHidden">
+            <summary>
+            Gets a flag to indicate if this category is hidden.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SynchronisationMaster.SynchronisationMasterEnabled">
+            <summary>
+            Gets Synchronisation Master Enabled setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SynchronisationMaster.SynchronisationMasterPort">
+            <summary>
+            Gets Synchronisation Master Send Port setting.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SettingsCategoryTypes.SynchronisationMaster.CopyTo(NgimuApi.SettingsCategoryTypes.SynchronisationMaster)">
+            <summary>
+            Copy the values of all the settings in this category to another
+            </summary>
+            <param name="other">Another category</param>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Wifi.Connection">
+            <summary>
+            Gets the Connection that this setting category is bound to or null if it is unbound.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Wifi.Text">
+            <summary>
+            Gets the category text including the full path from the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Wifi.CategoryPrefix">
+            <summary>
+            Gets the category prefix text.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Wifi.Parent">
+            <summary>
+            Gets the parent category of this category or null if this category is the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Wifi.IsHidden">
+            <summary>
+            Gets a flag to indicate if this category is hidden.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Wifi.WifiEnabled">
+            <summary>
+            Gets Wi-Fi Enabled setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Wifi.WifiFirmwareVersion">
+            <summary>
+            Gets Wi-Fi Firmware Version setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Wifi.WifiMacAddress">
+            <summary>
+            Gets Wi-Fi MAC Address setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Wifi.WifiIPAddress">
+            <summary>
+            Gets Wi-Fi IP Address setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Wifi.WifiMode">
+            <summary>
+            Gets Wi-Fi Mode setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Wifi.WifiAntenna">
+            <summary>
+            Gets Wi-Fi Antenna setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Wifi.WifiRegion">
+            <summary>
+            Gets Wi-Fi Region setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Wifi.AP">
+            <summary>
+            Gets AP settings category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Wifi.Client">
+            <summary>
+            Gets Client settings category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Wifi.Udp">
+            <summary>
+            Gets UDP settings category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Wifi.SynchronisationMaster">
+            <summary>
+            Gets Synchronisation Master settings category.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SettingsCategoryTypes.Wifi.CopyTo(NgimuApi.SettingsCategoryTypes.Wifi)">
+            <summary>
+            Copy the values of all the settings in this category to another
+            </summary>
+            <param name="other">Another category</param>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Serial.Connection">
+            <summary>
+            Gets the Connection that this setting category is bound to or null if it is unbound.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Serial.Text">
+            <summary>
+            Gets the category text including the full path from the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Serial.CategoryPrefix">
+            <summary>
+            Gets the category prefix text.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Serial.Parent">
+            <summary>
+            Gets the parent category of this category or null if this category is the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Serial.IsHidden">
+            <summary>
+            Gets a flag to indicate if this category is hidden.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Serial.SerialEnabled">
+            <summary>
+            Gets Serial Enabled setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Serial.SerialBaudRate">
+            <summary>
+            Gets Serial Baud Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Serial.SerialBaudRateError">
+            <summary>
+            Gets Serial Baud Rate Error setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Serial.SerialRtsCtsEnabled">
+            <summary>
+            Gets Serial RTS/CTS Enabled setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Serial.SerialInvertDataLines">
+            <summary>
+            Gets Serial Invert Data Lines setting.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SettingsCategoryTypes.Serial.CopyTo(NgimuApi.SettingsCategoryTypes.Serial)">
+            <summary>
+            Copy the values of all the settings in this category to another
+            </summary>
+            <param name="other">Another category</param>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SDCard.Connection">
+            <summary>
+            Gets the Connection that this setting category is bound to or null if it is unbound.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SDCard.Text">
+            <summary>
+            Gets the category text including the full path from the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SDCard.CategoryPrefix">
+            <summary>
+            Gets the category prefix text.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SDCard.Parent">
+            <summary>
+            Gets the parent category of this category or null if this category is the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SDCard.IsHidden">
+            <summary>
+            Gets a flag to indicate if this category is hidden.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SDCard.sdCardFileNamePrefix">
+            <summary>
+            Gets SD Card File Name Prefix setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SDCard.sdCardFileNumber">
+            <summary>
+            Gets SD Card File Number setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SDCard.sdCardMaxFileSize">
+            <summary>
+            Gets SD Card Maximum File Size setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SDCard.sdCardMaxFilePeriod">
+            <summary>
+            Gets SD Card Maximum File Period setting.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SettingsCategoryTypes.SDCard.CopyTo(NgimuApi.SettingsCategoryTypes.SDCard)">
+            <summary>
+            Copy the values of all the settings in this category to another
+            </summary>
+            <param name="other">Another category</param>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.MagneticFieldRejection.Connection">
+            <summary>
+            Gets the Connection that this setting category is bound to or null if it is unbound.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.MagneticFieldRejection.Text">
+            <summary>
+            Gets the category text including the full path from the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.MagneticFieldRejection.CategoryPrefix">
+            <summary>
+            Gets the category prefix text.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.MagneticFieldRejection.Parent">
+            <summary>
+            Gets the parent category of this category or null if this category is the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.MagneticFieldRejection.IsHidden">
+            <summary>
+            Gets a flag to indicate if this category is hidden.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.MagneticFieldRejection.AhrsMinimumMagneticField">
+            <summary>
+            Gets AHRS Minimum Magnetic Field setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.MagneticFieldRejection.AhrsMaximumMagneticField">
+            <summary>
+            Gets AHRS Maximum Magnetic Field setting.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SettingsCategoryTypes.MagneticFieldRejection.CopyTo(NgimuApi.SettingsCategoryTypes.MagneticFieldRejection)">
+            <summary>
+            Copy the values of all the settings in this category to another
+            </summary>
+            <param name="other">Another category</param>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Ahrs.Connection">
+            <summary>
+            Gets the Connection that this setting category is bound to or null if it is unbound.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Ahrs.Text">
+            <summary>
+            Gets the category text including the full path from the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Ahrs.CategoryPrefix">
+            <summary>
+            Gets the category prefix text.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Ahrs.Parent">
+            <summary>
+            Gets the parent category of this category or null if this category is the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Ahrs.IsHidden">
+            <summary>
+            Gets a flag to indicate if this category is hidden.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Ahrs.AhrsGain">
+            <summary>
+            Gets AHRS Gain setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Ahrs.AhrsGyroscopeBiasCorrection">
+            <summary>
+            Gets AHRS Gyroscope Bias Correction setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Ahrs.AhrsIgnoreMagnetometer">
+            <summary>
+            Gets AHRS Ignore Magnetometer setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Ahrs.MagneticFieldRejection">
+            <summary>
+            Gets Magnetic Field Rejection settings category.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SettingsCategoryTypes.Ahrs.CopyTo(NgimuApi.SettingsCategoryTypes.Ahrs)">
+            <summary>
+            Copy the values of all the settings in this category to another
+            </summary>
+            <param name="other">Another category</param>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendRates.Connection">
+            <summary>
+            Gets the Connection that this setting category is bound to or null if it is unbound.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendRates.Text">
+            <summary>
+            Gets the category text including the full path from the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendRates.CategoryPrefix">
+            <summary>
+            Gets the category prefix text.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendRates.Parent">
+            <summary>
+            Gets the parent category of this category or null if this category is the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendRates.IsHidden">
+            <summary>
+            Gets a flag to indicate if this category is hidden.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendRates.SendRateSensors">
+            <summary>
+            Gets Sensors Send Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendRates.SendRateMagnitudes">
+            <summary>
+            Gets Magnitudes Send Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendRates.SendRateQuaternion">
+            <summary>
+            Gets Quaternion Send Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendRates.SendRateRotationMatrix">
+            <summary>
+            Gets Rotation Matrix Send Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendRates.SendRateEulerAngles">
+            <summary>
+            Gets Euler Angles Send Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendRates.SendRateLinearAcceleration">
+            <summary>
+            Gets Linear Acceleration Send Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendRates.SendRateEarthAcceleration">
+            <summary>
+            Gets Earth Acceleration Send Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendRates.SendRateAltitude">
+            <summary>
+            Gets Altitude Send Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendRates.SendRateTemperature">
+            <summary>
+            Gets Temperature Send Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendRates.SendRateHumidity">
+            <summary>
+            Gets Humidity Send Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendRates.SendRateBattery">
+            <summary>
+            Gets Battery Send Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendRates.SendRateAnalogueInputs">
+            <summary>
+            Gets Analogue Inputs Send Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendRates.SendRateRssi">
+            <summary>
+            Gets RSSI Send Rate setting.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SettingsCategoryTypes.SendRates.CopyTo(NgimuApi.SettingsCategoryTypes.SendRates)">
+            <summary>
+            Copy the values of all the settings in this category to another
+            </summary>
+            <param name="other">Another category</param>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendCondition.Connection">
+            <summary>
+            Gets the Connection that this setting category is bound to or null if it is unbound.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendCondition.Text">
+            <summary>
+            Gets the category text including the full path from the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendCondition.CategoryPrefix">
+            <summary>
+            Gets the category prefix text.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendCondition.Parent">
+            <summary>
+            Gets the parent category of this category or null if this category is the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendCondition.IsHidden">
+            <summary>
+            Gets a flag to indicate if this category is hidden.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendCondition.AuxSerialBufferSize">
+            <summary>
+            Gets Auxiliary Serial Send Buffer Size setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendCondition.AuxSerialTimeout">
+            <summary>
+            Gets Auxiliary Serial Send Timeout setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SendCondition.AuxSerialFramingCharacter">
+            <summary>
+            Gets Auxiliary Serial Send Framing Character setting.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SettingsCategoryTypes.SendCondition.CopyTo(NgimuApi.SettingsCategoryTypes.SendCondition)">
+            <summary>
+            Copy the values of all the settings in this category to another
+            </summary>
+            <param name="other">Another category</param>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.AuxiliarySerial.Connection">
+            <summary>
+            Gets the Connection that this setting category is bound to or null if it is unbound.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.AuxiliarySerial.Text">
+            <summary>
+            Gets the category text including the full path from the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.AuxiliarySerial.CategoryPrefix">
+            <summary>
+            Gets the category prefix text.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.AuxiliarySerial.Parent">
+            <summary>
+            Gets the parent category of this category or null if this category is the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.AuxiliarySerial.IsHidden">
+            <summary>
+            Gets a flag to indicate if this category is hidden.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.AuxiliarySerial.AuxSerialEnabled">
+            <summary>
+            Gets Auxiliary Serial Enabled setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.AuxiliarySerial.AuxSerialBaudRate">
+            <summary>
+            Gets Auxiliary Serial Baud Rate setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.AuxiliarySerial.AuxSerialBaudRateError">
+            <summary>
+            Gets Auxiliary Serial Baud Rate Error setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.AuxiliarySerial.AuxSerialRtsCtsEnabled">
+            <summary>
+            Gets Auxiliary Serial RTS/CTS Enabled setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.AuxiliarySerial.AuxSerialInvertDataLines">
+            <summary>
+            Gets Auxiliary Serial Invert Data Lines setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.AuxiliarySerial.AuxSerialOscPassthrough">
+            <summary>
+            Gets Auxiliary Serial OSC Passthrough setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.AuxiliarySerial.AuxSerialSendAsString">
+            <summary>
+            Gets Auxiliary Serial Send As String setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.AuxiliarySerial.SendCondition">
+            <summary>
+            Gets Send Condition settings category.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SettingsCategoryTypes.AuxiliarySerial.CopyTo(NgimuApi.SettingsCategoryTypes.AuxiliarySerial)">
+            <summary>
+            Copy the values of all the settings in this category to another
+            </summary>
+            <param name="other">Another category</param>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Battery.Connection">
+            <summary>
+            Gets the Connection that this setting category is bound to or null if it is unbound.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Battery.Text">
+            <summary>
+            Gets the category text including the full path from the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Battery.CategoryPrefix">
+            <summary>
+            Gets the category prefix text.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Battery.Parent">
+            <summary>
+            Gets the parent category of this category or null if this category is the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Battery.IsHidden">
+            <summary>
+            Gets a flag to indicate if this category is hidden.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Battery.BatteryMinimumVoltage">
+            <summary>
+            Gets Battery Minimum Voltage setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Battery.BatteryCapacity">
+            <summary>
+            Gets Battery Capacity setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Battery.BatteryHealth">
+            <summary>
+            Gets Battery Health setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.Battery.BatteryChargeDischargeCycles">
+            <summary>
+            Gets Battery Charge/Discharge Cycles setting.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SettingsCategoryTypes.Battery.CopyTo(NgimuApi.SettingsCategoryTypes.Battery)">
+            <summary>
+            Copy the values of all the settings in this category to another
+            </summary>
+            <param name="other">Another category</param>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.PowerManagement.Connection">
+            <summary>
+            Gets the Connection that this setting category is bound to or null if it is unbound.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.PowerManagement.Text">
+            <summary>
+            Gets the category text including the full path from the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.PowerManagement.CategoryPrefix">
+            <summary>
+            Gets the category prefix text.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.PowerManagement.Parent">
+            <summary>
+            Gets the parent category of this category or null if this category is the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.PowerManagement.IsHidden">
+            <summary>
+            Gets a flag to indicate if this category is hidden.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.PowerManagement.CpuIdleMode">
+            <summary>
+            Gets CPU Idle Mode setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.PowerManagement.LedsEnabled">
+            <summary>
+            Gets LEDs Enabled setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.PowerManagement.UsbExternalCurrentLimit">
+            <summary>
+            Gets USB/External Current Limit setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.PowerManagement.SleepTimer">
+            <summary>
+            Gets Sleep Timer setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.PowerManagement.WakeupTimer">
+            <summary>
+            Gets Wakeup Timer setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.PowerManagement.MotionTriggerWakeup">
+            <summary>
+            Gets Motion Trigger Wakeup setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.PowerManagement.MutedOnStartup">
+            <summary>
+            Gets Muted On Startup setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.PowerManagement.Battery">
+            <summary>
+            Gets Battery settings category.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SettingsCategoryTypes.PowerManagement.CopyTo(NgimuApi.SettingsCategoryTypes.PowerManagement)">
+            <summary>
+            Copy the values of all the settings in this category to another
+            </summary>
+            <param name="other">Another category</param>
+        </member>
+        <member name="P:NgimuApi.ISettingValue.Name">
+            <summary>
+            Gets the name of the setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.ISettingValue.ValueType">
+            <summary>
+            Gets the .NET type of the value. 
+            </summary>
+        </member>
+        <member name="P:NgimuApi.ISettingValue.SettingValueType">
+            <summary>
+            Gets the IMU value type. 
+            </summary>
+        </member>
+        <member name="P:NgimuApi.ISettingValue.IsReadOnly">
+            <summary>
+            Is this variable read-only. 
+            </summary>
+        </member>
+        <member name="P:NgimuApi.ISettingValue.Category">
+            <summary>
+            Gets the category that this setting value belongs to. 
+            </summary>
+        </member>
+        <member name="P:NgimuApi.ISettingValue.Documentation">
+            <summary>
+            Gets the description of this variable.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.ISettingValue.HasRemoteValue">
+            <summary>
+            Has this instance received a value from the remote source. 
+            </summary>
+        </member>
+        <member name="P:NgimuApi.ISettingValue.CommunicationResult">
+            <summary>
+            Gets or sets the result from the most recent communication.
+            </summary>
+            <value>The communication result.</value>
+        </member>
+        <member name="P:NgimuApi.ISettingValue.IsValueUndefined">
+            <summary>
+            Is there a valid value to write to the device.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.ISettingValue.ResetRemoteValueState">
+            <summary>
+            Reset the state of the HasRemoteValue flag. 
+            </summary>				
+        </member>
+        <member name="M:NgimuApi.ISettingValue.SetValue(System.Object)">
+            <summary>
+            Set the local value. 
+            </summary>
+            <param name="value">The local value.</param>
+        </member>
+        <member name="M:NgimuApi.ISettingValue.GetValue">
+            <summary>
+            Get the local value. 
+            </summary>
+            <returns>The current local value.</returns>
+        </member>
+        <member name="M:NgimuApi.ISettingValue.SetRemoteValue(System.Object)">
+            <summary>
+            Set the remote value. 
+            </summary>
+            <param name="value">The remote value.</param>
+        </member>
+        <member name="M:NgimuApi.ISettingValue.GetRemoteValue">
+            <summary>
+            Get the remote value. 
+            </summary>
+            <returns>The current remote value.</returns>
+        </member>
+        <member name="P:NgimuApi.ISettingValue.OscAddress">
+            <summary>
+            Gets OSC address of the callback. 
+            </summary>
+        </member>
+        <member name="P:NgimuApi.ISettingValue.Message">
+            <summary>
+            Gets OSC callback to be sent. 
+            </summary>
+        </member>
+        <member name="P:NgimuApi.ISettingValue.HasCallbackCompleted">
+            <summary>
+            True if the callback has completed.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.ISettingValue.ResetCallbackState">
+            <summary>
+            Reset the callback to non-completed. 
+            </summary>
+        </member>
+        <member name="M:NgimuApi.ISettingValue.OnMessageReceived(Rug.Osc.OscMessage)">
+            <summary>
+            Call this method with the returning callback. 
+            </summary>
+            <param name="message">An OSC callback.</param>
+        </member>
+        <member name="M:NgimuApi.ISettingValue.OnLocalMessage(Rug.Osc.OscMessage)">
+            <summary>
+            Call this method with a local value. 
+            </summary>
+            <param name="message">An OSC callback.</param>
+        </member>
+        <member name="P:NgimuApi.SettingProcess.IsRunning">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingProcess.Mode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingProcess.Communicator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingProcess.Reporter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingProcess.Remaining">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingProcess.RetryLimit">
+            <summary>
+            Gets the maximum number of retries before failure.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingProcess.Timeout">
+            <summary>
+            Gets the time out in milliseconds between each process iteration. 
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SettingProcess.#ctor(NgimuApi.Connection,NgimuApi.IReporter,System.Collections.Generic.IEnumerable{NgimuApi.ISettingValue},System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="comms"></param>
+            <param name="reporter">Progress reporter.</param>
+            <param name="variables"></param>
+            <param name="timeout"></param>
+            <param name="retryLimit"></param>
+        </member>
+        <member name="M:NgimuApi.SettingProcess.#ctor(NgimuApi.Connection,NgimuApi.IReporter,NgimuApi.ISettingValue,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="comms"></param>
+            <param name="reporter">Progress reporter.</param>
+            <param name="variables"></param>
+            <param name="timeout"></param>
+            <param name="retryLimit"></param>
+        </member>
+        <member name="M:NgimuApi.SettingProcess.Stop">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SettingProcess.Read">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NgimuApi.SettingProcess.Write">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NgimuApi.SettingProcess.ReadAsync">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SettingProcess.WriteAsync">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SettingProcess.ReadSingle``1(NgimuApi.Connection,NgimuApi.IReporter,NgimuApi.ISettingValue{``0},``0@)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="connection"></param>
+            <param name="reporter">Progress reporter.</param>
+            <param name="muteToStart"></param>
+            <param name="message"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NgimuApi.SettingProcess.ReadSingle``1(NgimuApi.Connection,NgimuApi.IReporter,System.Int32,System.Int32,NgimuApi.ISettingValue{``0},``0@)">
+            <summary>
+            Reads a single <see cref="T:NgimuApi.ISettingValue"/>.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="connection">The connection.</param>
+            <param name="reporter">The reporter.</param>
+            <param name="timeout">The timeout.</param>
+            <param name="retryLimit">The retry limit.</param>
+            <param name="setting">The setting.</param>
+            <param name="value">The value.</param>
+            <returns>ImuAsyncProcessResult.</returns>
+        </member>
+        <member name="T:NgimuApi.MessageDirection">
+            <summary>
+            The direction of a message.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.MessageDirection.Transmit">
+            <summary>
+            Transmitted.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.MessageDirection.Receive">
+            <summary>
+            Received.
+            </summary>
+        </member>
+        <member name="T:NgimuApi.SerialConnectionInfo">
+            <summary>
+            Connection info that describes a connection via a serial port.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SerialConnectionInfo.PortName">
+            <summary>
+            Gets or sets the name of the serial port. 
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SerialConnectionInfo.BaudRate">
+            <summary>
+            Gets or sets the baud rate.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SerialConnectionInfo.RtsCtsEnabled">
+            <summary>
+            Gets or sets the RTS/CTS enabled flag.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SerialConnectionInfo.#ctor">
+            <summary>
+            Creates an instance using the default values.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SerialConnectionInfo.ToIDString">
+            <summary>
+            The ID to use as a unique key.
+            </summary>
+            <returns>A unique key string.</returns>
+        </member>
+        <member name="T:NgimuApi.UdpConnectionInfo">
+            <summary>
+            Connection info that describes a connection via UDP.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.UdpConnectionInfo.SendIPAddress">
+            <summary>
+            Gets or sets the IP address of the device.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.UdpConnectionInfo.SendPort">
+            <summary>
+            Gets or sets the port of the device.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.UdpConnectionInfo.AdapterIPAddress">
+            <summary>
+            Gets or sets the IP address of the local network adapter.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.UdpConnectionInfo.ReceivePort">
+            <summary>
+            Gets or sets the local port number that we will receive on.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.UdpConnectionInfo.AdapterName">
+            <summary>
+            Gets or sets the name of the local network adapter.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.UdpConnectionInfo.NetworkAdapter">
+            <summary>
+            Gets or sets the network adapter interface instance. 
+            </summary>
+        </member>
+        <member name="P:NgimuApi.UdpConnectionInfo.HasAdapterChanged">
+            <summary>
+            Is true if a change in the local adapters state has been detected.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.UdpConnectionInfo.#ctor">
+            <summary>
+            Creates an instance using the default values.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.UdpConnectionInfo.RefreshAdapterAddress(System.Net.NetworkInformation.NetworkInterface[])">
+            <summary>
+            Check the adapters to see if the adapter we are using has changed IP address. 
+            </summary>
+            <param name="interfaces">An array of interfaces to check against.</param>
+        </member>
+        <member name="M:NgimuApi.UdpConnectionInfo.ToString">
+            <summary>
+            Get a regional string format for this connection (Don't use this string as a key). 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NgimuApi.UdpConnectionInfo.ToIDString">
+            <summary>
+            The ID to use as a unique key.
+            </summary>
+            <returns>A unique key string.</returns>
+        </member>
+        <member name="T:NgimuApi.SettingsDocumentation">
+            <summary>
+            Settings loaded from an embedded source. 
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsDocumentation.NoItemSelectedText">
+            <summary>
+            Gets the text to display when no setting is selected. This is a candidate to be moved out of the API. 
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SettingsDocumentation.#cctor">
+            <summary>
+            Load the settings from the embedded source. 
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SettingsDocumentation.ContainsAddress(System.String)">
+            <summary>
+            Does the settings contain a setting with a given OSC address.
+            </summary>
+            <param name="address">A OSC address.</param>
+            <returns>True if a setting exists with the supplied OSC address.</returns>
+        </member>
+        <member name="P:NgimuApi.SettingCategrory.Items">
+            <summary>
+            Gets all ISettingItem items in this category that are not hidden. 
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingCategrory.Values">
+            <summary>
+            Gets all ISettingValue items in this category and all child categories.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingCategrory.HasConnection">
+            <summary>
+            Gets a flag indicating that this category is bound to a connection.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingCategrory.Connection">
+            <summary>
+            Gets the Connection that this setting category is bound to or null if it is unbound.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingCategrory.Parent">
+            <summary>
+            Gets the parent category of this category or null if this category is the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingCategrory.Text">
+            <summary>
+            Gets the category text including the full path from the root category.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingCategrory.CategoryPrefix">
+            <summary>
+            Gets the category prefix text.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingCategrory.IsHidden">
+            <summary>
+            Gets a flag to indicate if this category is hidden.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SettingCategrory.ToString">
+            <summary>
+            Gets the text value of this category.
+            </summary>
+            <returns>The text value of this category.</returns>
+        </member>
+        <member name="P:NgimuApi.SettingCategrory.CategoryText">
+            <summary>
+            Gets the text of the category. 
+            </summary>
+        </member>
+        <member name="T:NgimuApi.Strings">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.AsyncProcess_RetryLimitReached">
+            <summary>
+              Looks up a localized string similar to Retry limit reached..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.AutoConnect_CheckingSerial">
+            <summary>
+              Looks up a localized string similar to Checking for available serial ports..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.AutoConnect_CheckingSerialAndUdp">
+            <summary>
+              Looks up a localized string similar to Checking for available serial ports and network adapters..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.AutoConnect_CheckingUdp">
+            <summary>
+              Looks up a localized string similar to Checking for available network adapters..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.AutoConnect_FoundDevice">
+            <summary>
+              Looks up a localized string similar to Found device on: &quot;{0}&quot;..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.AutoConnect_FoundMoreThanOneDevice">
+            <summary>
+              Looks up a localized string similar to Found more than one device..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.AutoConnect_SearchingForDevicesOn">
+            <summary>
+              Looks up a localized string similar to Searching for devices on: &quot;{0}&quot;..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.CommandProcess_AlreadyRunning">
+            <summary>
+              Looks up a localized string similar to Settings read process is already running..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.CommandProcess_CommunicationError">
+            <summary>
+              Looks up a localized string similar to A communication error occured while executing commands..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.CommandProcess_CouldNotDoAll">
+            <summary>
+              Looks up a localized string similar to Could not execute all commands..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.CommandProcess_Retrying">
+            <summary>
+              Looks up a localized string similar to Retrying {0} of {1} commands..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.CommandProcess_Starting">
+            <summary>
+              Looks up a localized string similar to Executing {0} commands..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.CommandProcess_Successful">
+            <summary>
+              Looks up a localized string similar to Successfully executed {0} of {1} commands..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.CommandXml_CouldNotLoad">
+            <summary>
+              Looks up a localized string similar to Could not load IMU command addresses from XML..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.CommandXml_MissingRootNode">
+            <summary>
+              Looks up a localized string similar to Missing root node..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.Connection_CouldNotSendPacket">
+            <summary>
+              Looks up a localized string similar to Could not send OSC packet..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.Connection_Disconnected">
+            <summary>
+              Looks up a localized string similar to Disconnected from &quot;{0}&quot;..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.Connection_ErrorWhileProcessingPacket">
+            <summary>
+              Looks up a localized string similar to Error while processing OSC packet..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.Connection_FailedToConnect">
+            <summary>
+              Looks up a localized string similar to Failed to connect to &quot;{0}&quot;..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.Connection_ReceivedCorruptedPacket">
+            <summary>
+              Looks up a localized string similar to Received corrupted OSC packet..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.Data_AlreadyConnected">
+            <summary>
+              Looks up a localized string similar to Already connected..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.Data_NotConnected">
+            <summary>
+              Looks up a localized string similar to Not connected..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.EulerAngles_ArrayLengthNot3">
+            <summary>
+              Looks up a localized string similar to Array length must be 3..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.Exception_UnknownConnectionType">
+            <summary>
+              Looks up a localized string similar to Unknown connection type..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.FileReadConnectionImplementation_ErrorReading">
+            <summary>
+              Looks up a localized string similar to Error while reading OSC..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.FileReadConnectionImplementation_Reading">
+            <summary>
+              Looks up a localized string similar to Reading file &quot;{0}&quot;..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.FileWriteConnectionImplementation_Writing">
+            <summary>
+              Looks up a localized string similar to Writing to file &quot;{0}&quot;..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.Quaternion_ArrayLengthNot4">
+            <summary>
+              Looks up a localized string similar to Array length must be 4..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.RemoteVariableFactory_UnsupportedType">
+            <summary>
+              Looks up a localized string similar to Unsupported type &quot;{0}&quot;..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.RotationMatrix_ArrayLengthNot9">
+            <summary>
+              Looks up a localized string similar to Array length must be 9..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.SerialConnectionImplementation_Connected">
+            <summary>
+              Looks up a localized string similar to Connected to &quot;{0}&quot;..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.Settings_CouldNotLoad">
+            <summary>
+              Looks up a localized string similar to Could not load settings from XML..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.Settings_MissingAttribute_Name">
+            <summary>
+              Looks up a localized string similar to One or more setting does not have a &quot;Name&quot; attribute..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.Settings_MissingAttribute_OscAddress">
+            <summary>
+              Looks up a localized string similar to One or more setting does not have a &quot;OscAddress&quot; attribute..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.Settings_MissingRootNode">
+            <summary>
+              Looks up a localized string similar to Missing root node..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.Settings_UnknownSettingType">
+            <summary>
+              Looks up a localized string similar to Unknown setting type &quot;{0}&quot;..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.SettingsProcess_CouldNotMute">
+            <summary>
+              Looks up a localized string similar to Error could not mute OSC traffic..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.SettingsProcess_CouldNotUnmute">
+            <summary>
+              Looks up a localized string similar to Error could not unmute OSC traffic..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.SettingsProcess_ProcessAlreadyRunning">
+            <summary>
+              Looks up a localized string similar to Settings {0} process is already running..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.SettingsRead_AlreadyRunning">
+            <summary>
+              Looks up a localized string similar to Settings read process is already running..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.SettingsRead_CommunicationError">
+            <summary>
+              Looks up a localized string similar to A communication error occured while reading settings..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.SettingsRead_CouldNotDoAll">
+            <summary>
+              Looks up a localized string similar to Could not read all settings..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.SettingsRead_NoValidSettings">
+            <summary>
+              Looks up a localized string similar to No settings to read..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.SettingsRead_Retrying">
+            <summary>
+              Looks up a localized string similar to Retrying {0} of {1} settings..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.SettingsRead_Starting">
+            <summary>
+              Looks up a localized string similar to Reading {0} settings..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.SettingsRead_Successful">
+            <summary>
+              Looks up a localized string similar to Successfully read {0} of {1} settings..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.SettingsWrite_AlreadyRunning">
+            <summary>
+              Looks up a localized string similar to Settings write process is already running..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.SettingsWrite_CommunicationError">
+            <summary>
+              Looks up a localized string similar to A communication error occured while writing settings..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.SettingsWrite_CouldNotDoAll">
+            <summary>
+              Looks up a localized string similar to Could not write all settings..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.SettingsWrite_NoValidSettings">
+            <summary>
+              Looks up a localized string similar to Cannot write undefined setting values..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.SettingsWrite_Retrying">
+            <summary>
+              Looks up a localized string similar to Retrying {0} of {1} settings..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.SettingsWrite_Starting">
+            <summary>
+              Looks up a localized string similar to Writing {0} settings..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.SettingsWrite_Successful">
+            <summary>
+              Looks up a localized string similar to Successfully wrote {0} of {1} settings..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.UdpConnectionImplementation_Connected">
+            <summary>
+              Looks up a localized string similar to Connected to &quot;{0}&quot;..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.UdpConnectionImplementation_ErrorReceiving">
+            <summary>
+              Looks up a localized string similar to Error while listening for OSC..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.UdpConnectionImplementation_FailedToConnect">
+            <summary>
+              Looks up a localized string similar to Failed to connect to &quot;{0}&quot;..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.UdpConnectionImplementation_IPAddressChanged">
+            <summary>
+              Looks up a localized string similar to Adapter IP address changed..
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Strings.UdpConnectionInfo_StringFormat">
+            <summary>
+              Looks up a localized string similar to Send: {0}, {1}; Receive: {2}, {3}; {4}.
+            </summary>
+        </member>
+        <member name="T:NgimuApi.SynchronisationMaster">
+            <summary>
+            Synchronisation master. This class cannot be inherited.
+            </summary>
+            <seealso cref="T:System.IDisposable" />
+        </member>
+        <member name="F:NgimuApi.SynchronisationMaster.Port">
+            <summary>
+            The send UDP port. All slaves must be listening on this port.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.SynchronisationMaster.Interval">
+            <summary>
+            The send interval of synchronisation messages in milliseconds.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SynchronisationMaster.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NgimuApi.SynchronisationMaster"/> class.
+            </summary>
+            <param name="port">The send UDP port. All slaves must be listening on this port.</param>
+            <param name="interval">The send interval of synchronisation messages in milliseconds.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">interval;Interval must be greater or equal to 1 milliseconds.</exception>
+            <autogeneratedoc />
+        </member>
+        <member name="M:NgimuApi.SynchronisationMaster.Start">
+            <summary>
+            Starts the synchronisation service.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SynchronisationMaster.Stop">
+            <summary>
+            Stops the synchronisation service.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.SynchronisationMaster.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting resources.
+            </summary>
+        </member>
+    </members>
+</doc>
