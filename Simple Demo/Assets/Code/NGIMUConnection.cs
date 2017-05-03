@@ -13,7 +13,7 @@ public class NGIMUConnection : MonoBehaviour
 
     private Connection connection;
 
-    public void ConnectTo(ConnectionSearchInfo info)
+    public void ConnectTo(ConnectionSearchResult info)
     {
         reporter.Clear(); 
 

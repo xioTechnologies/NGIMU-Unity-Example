@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class ConnectionListItem : MonoBehaviour
 {
-    public delegate void ConnectionListItemEvent(ConnectionListItem item, ConnectionSearchInfo connectionSearchInfo);
+    public delegate void ConnectionListItemEvent(ConnectionListItem item, ConnectionSearchResult connectionSearchInfo);
 
     private Button button;
     private Text text;
@@ -12,7 +12,7 @@ public class ConnectionListItem : MonoBehaviour
     [HideInInspector]
     public RectTransform RectTransform;
 
-    public ConnectionSearchInfo ConnectionSearchInfo { get; set; }
+    public ConnectionSearchResult ConnectionSearchInfo { get; set; }
 
     public event ConnectionListItemEvent ItemSelected;
 

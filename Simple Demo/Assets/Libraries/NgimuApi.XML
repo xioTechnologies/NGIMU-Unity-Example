@@ -331,19 +331,19 @@
             Gets the OSC address for this data object.
             </summary>
         </member>
-        <member name="P:NgimuApi.Data.TemperatureData.ProcessorTemperature">
+        <member name="P:NgimuApi.Data.TemperatureData.Processor">
             <summary>
-            Gets the processor temperature in degrees Celsius.
+            Gets the temperature of the processor in degrees Celsius.
             </summary>
         </member>
-        <member name="P:NgimuApi.Data.TemperatureData.SensorTemperature">
+        <member name="P:NgimuApi.Data.TemperatureData.GyroscopeAndAccelerometer">
             <summary>
-            Gets the accelerometer temperature in degrees Celsius.
+            Gets the temperature of the gyroscope and accelerometer in degrees Celsius.
             </summary>
         </member>
-        <member name="P:NgimuApi.Data.TemperatureData.BarometerTemperature">
+        <member name="P:NgimuApi.Data.TemperatureData.EnvironmentalSensor">
             <summary>
-            Gets the barometer temperature in degrees Celsius.
+            Gets the temperature of the environmental sensor in degrees Celsius.
             </summary>
         </member>
         <member name="M:NgimuApi.Data.TemperatureData.OnMessageReceived(Rug.Osc.OscMessage)">
@@ -551,27 +551,27 @@
             <param name="message">Received OSC message.</param>
             <returns>True if the OSC message was successfully parsed.</returns>
         </member>
-        <member name="T:NgimuApi.SearchForConnections.ConnectionSearchInfo">
+        <member name="T:NgimuApi.SearchForConnections.ConnectionSearchResult">
             <summary>
-            Connection search information. Describes a detected possible connection. 
+            Connection search result. Describes a detected possible connection. 
             </summary>
         </member>
-        <member name="P:NgimuApi.SearchForConnections.ConnectionSearchInfo.DeviceDescriptor">
+        <member name="P:NgimuApi.SearchForConnections.ConnectionSearchResult.DeviceDescriptor">
             <summary>
             Gets the serial number of the detected device. 
             </summary>
         </member>
-        <member name="P:NgimuApi.SearchForConnections.ConnectionSearchInfo.ConnectionType">
+        <member name="P:NgimuApi.SearchForConnections.ConnectionSearchResult.ConnectionType">
             <summary>
             Gets the type of the connection.
             </summary>
         </member>
-        <member name="P:NgimuApi.SearchForConnections.ConnectionSearchInfo.ConnectionInfo">
+        <member name="P:NgimuApi.SearchForConnections.ConnectionSearchResult.ConnectionInfo">
             <summary>
             Gets the IConnectionInfo that can be used to create a connection.
             </summary>
         </member>
-        <member name="M:NgimuApi.SearchForConnections.ConnectionSearchInfo.#ctor(System.String,NgimuApi.IConnectionInfo)">
+        <member name="M:NgimuApi.SearchForConnections.ConnectionSearchResult.#ctor(System.String,NgimuApi.IConnectionInfo)">
             <summary>
             Creates a AutoConnectionInfo object. 
             </summary>
@@ -976,7 +976,7 @@
         </member>
         <member name="P:NgimuApi.Helper_Strings.ImuAsyncProcess_CommunicationError">
             <summary>
-              Looks up a localized string similar to A communication error occured while {0}..
+              Looks up a localized string similar to A communication error occurred while {0}..
             </summary>
         </member>
         <member name="P:NgimuApi.Helper_Strings.ImuAsyncProcess_CouldNot">
@@ -1701,7 +1701,7 @@
             Occurs when a message is sent or received.
             </summary>
         </member>
-        <member name="M:NgimuApi.Connection.#ctor(NgimuApi.SearchForConnections.ConnectionSearchInfo)">
+        <member name="M:NgimuApi.Connection.#ctor(NgimuApi.SearchForConnections.ConnectionSearchResult)">
             <summary>
             Create a connection using the supplied auto connection info.
             </summary>
@@ -2081,17 +2081,12 @@
             Creates a quaternion from an array.  The element order is: w, x, y, z.
             </summary>
         </member>
-        <member name="M:NgimuApi.Maths.Quaternion.Conjugate">
+        <member name="M:NgimuApi.Maths.Quaternion.Conjugate(NgimuApi.Maths.Quaternion)">
             <summary>
-            Returns the quaternion conjugate.
+            Returns the quaternion conjugate. 
             </summary>
-        </member>
-        <member name="M:NgimuApi.Maths.Quaternion.Equals(NgimuApi.Maths.Quaternion)">
-            <summary>
-            Returns true if the numeric value of this instance is equal to the other quaternion.
-            </summary>
-            <param name="other">The other quaternion to be compared.</param>
-            <returns>True if the numeric value of this instance is equal to the other quaternion.</returns>
+            <param name="quaternion">The quaternion.</param>
+            <returns>Quaternion conjugate.</returns>
         </member>
         <member name="M:NgimuApi.Maths.Quaternion.Normalise(NgimuApi.Maths.Quaternion)">
             <summary>
@@ -2135,6 +2130,36 @@
             Converts the numeric value of this instance to its equivalent string representation.
             </summary>
             <returns>The string representation of the value of this instance. </returns>
+        </member>
+        <member name="M:NgimuApi.Maths.Quaternion.op_Equality(NgimuApi.Maths.Quaternion,NgimuApi.Maths.Quaternion)">
+            <summary>
+            Implements the == operator.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:NgimuApi.Maths.Quaternion.op_Inequality(NgimuApi.Maths.Quaternion,NgimuApi.Maths.Quaternion)">
+            <summary>
+            Implements the != operator.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:NgimuApi.Maths.Quaternion.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal to this instance.
+            </summary>
+            <param name="other">The <see cref="T:System.Object" /> to compare with this instance.</param>
+            <returns><c>true</c> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:NgimuApi.Maths.Quaternion.Equals(NgimuApi.Maths.Quaternion)">
+            <summary>
+            Returns true if the numeric value of this instance is equal to the other quaternion.
+            </summary>
+            <param name="other">The other quaternion to be compared.</param>
+            <returns>True if the numeric value of this instance is equal to the other quaternion.</returns>
         </member>
         <member name="P:NgimuApi.Settings.Connection">
             <summary>
@@ -2368,7 +2393,7 @@
         </member>
         <member name="P:NgimuApi.Settings.WifiClientLowPower">
             <summary>
-            Gets Wi-Fi Client SSIDLow Power Mode setting.
+            Gets Wi-Fi Client Low Power Mode setting.
             </summary>
         </member>
         <member name="P:NgimuApi.Settings.WifiSendIPAddress">
@@ -2399,6 +2424,11 @@
         <member name="P:NgimuApi.Settings.SynchronisationMasterPort">
             <summary>
             Gets Synchronisation Master Send Port setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.SynchronisationMasterLatency">
+            <summary>
+            Gets Synchronisation Network Latency setting.
             </summary>
         </member>
         <member name="P:NgimuApi.Settings.SerialEnabled">
@@ -2596,9 +2626,9 @@
             Gets LEDs Enabled setting.
             </summary>
         </member>
-        <member name="P:NgimuApi.Settings.UsbExternalCurrentLimit">
+        <member name="P:NgimuApi.Settings.ExternalCurrentLimit">
             <summary>
-            Gets USB/External Current Limit setting.
+            Gets External Current Limit setting.
             </summary>
         </member>
         <member name="P:NgimuApi.Settings.SleepTimer">
@@ -2614,6 +2644,11 @@
         <member name="P:NgimuApi.Settings.MotionTriggerWakeup">
             <summary>
             Gets Motion Trigger Wakeup setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.Settings.ExternalPowerWakeup">
+            <summary>
+            Gets External Power Wakeup setting.
             </summary>
         </member>
         <member name="P:NgimuApi.Settings.MutedOnStartup">
@@ -2646,6 +2681,23 @@
             Copy the values of all the settings in this category to another
             </summary>
             <param name="other">Another category</param>
+        </member>
+        <member name="F:NgimuApi.Settings.ExpectedFirmwareVersion">
+            <summary>
+            The expected firmware version.
+            </summary>
+        </member>
+        <member name="M:NgimuApi.Settings.CheckFirmwareCompatibility">
+            <summary>
+            Checks the firmware compatibility.
+            </summary>
+            <returns>FirmwareCompatibility.</returns>
+        </member>
+        <member name="M:NgimuApi.Settings.GetDeviceDescriptor">
+            <summary>
+            Gets the device descriptor.
+            </summary>
+            <returns>string in the format "{DeviceName} - {SerialNumber}"</returns>
         </member>
         <member name="T:NgimuApi.SettingsCategoryTypes">
             <summary>
@@ -2897,7 +2949,7 @@
         </member>
         <member name="P:NgimuApi.SettingsCategoryTypes.Client.WifiClientLowPower">
             <summary>
-            Gets Wi-Fi Client SSIDLow Power Mode setting.
+            Gets Wi-Fi Client Low Power Mode setting.
             </summary>
         </member>
         <member name="M:NgimuApi.SettingsCategoryTypes.Client.CopyTo(NgimuApi.SettingsCategoryTypes.Client)">
@@ -2990,6 +3042,11 @@
         <member name="P:NgimuApi.SettingsCategoryTypes.SynchronisationMaster.SynchronisationMasterPort">
             <summary>
             Gets Synchronisation Master Send Port setting.
+            </summary>
+        </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.SynchronisationMaster.SynchronisationMasterLatency">
+            <summary>
+            Gets Synchronisation Network Latency setting.
             </summary>
         </member>
         <member name="M:NgimuApi.SettingsCategoryTypes.SynchronisationMaster.CopyTo(NgimuApi.SettingsCategoryTypes.SynchronisationMaster)">
@@ -3582,9 +3639,9 @@
             Gets LEDs Enabled setting.
             </summary>
         </member>
-        <member name="P:NgimuApi.SettingsCategoryTypes.PowerManagement.UsbExternalCurrentLimit">
+        <member name="P:NgimuApi.SettingsCategoryTypes.PowerManagement.ExternalCurrentLimit">
             <summary>
-            Gets USB/External Current Limit setting.
+            Gets External Current Limit setting.
             </summary>
         </member>
         <member name="P:NgimuApi.SettingsCategoryTypes.PowerManagement.SleepTimer">
@@ -3602,6 +3659,11 @@
             Gets Motion Trigger Wakeup setting.
             </summary>
         </member>
+        <member name="P:NgimuApi.SettingsCategoryTypes.PowerManagement.ExternalPowerWakeup">
+            <summary>
+            Gets External Power Wakeup setting.
+            </summary>
+        </member>
         <member name="P:NgimuApi.SettingsCategoryTypes.PowerManagement.MutedOnStartup">
             <summary>
             Gets Muted On Startup setting.
@@ -3617,6 +3679,26 @@
             Copy the values of all the settings in this category to another
             </summary>
             <param name="other">Another category</param>
+        </member>
+        <member name="T:NgimuApi.FirmwareCompatibility">
+            <summary>
+            Firmware compatibility result.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.FirmwareCompatibility.Compatible">
+            <summary>
+            The detected firmware version is compatible.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.FirmwareCompatibility.NotCompatible">
+            <summary>
+            The detected firmware version is incompatible.
+            </summary>
+        </member>
+        <member name="F:NgimuApi.FirmwareCompatibility.Unknown">
+            <summary>
+            The firmware version is unknown.
+            </summary>
         </member>
         <member name="P:NgimuApi.ISettingValue.Name">
             <summary>
@@ -4072,7 +4154,7 @@
         </member>
         <member name="P:NgimuApi.Strings.CommandProcess_CommunicationError">
             <summary>
-              Looks up a localized string similar to A communication error occured while executing commands..
+              Looks up a localized string similar to A communication error occurred while executing commands..
             </summary>
         </member>
         <member name="P:NgimuApi.Strings.CommandProcess_CouldNotDoAll">
@@ -4210,16 +4292,6 @@
               Looks up a localized string similar to Unknown setting type &quot;{0}&quot;..
             </summary>
         </member>
-        <member name="P:NgimuApi.Strings.SettingsProcess_CouldNotMute">
-            <summary>
-              Looks up a localized string similar to Error could not mute OSC traffic..
-            </summary>
-        </member>
-        <member name="P:NgimuApi.Strings.SettingsProcess_CouldNotUnmute">
-            <summary>
-              Looks up a localized string similar to Error could not unmute OSC traffic..
-            </summary>
-        </member>
         <member name="P:NgimuApi.Strings.SettingsProcess_ProcessAlreadyRunning">
             <summary>
               Looks up a localized string similar to Settings {0} process is already running..
@@ -4232,7 +4304,7 @@
         </member>
         <member name="P:NgimuApi.Strings.SettingsRead_CommunicationError">
             <summary>
-              Looks up a localized string similar to A communication error occured while reading settings..
+              Looks up a localized string similar to A communication error occurred while reading settings..
             </summary>
         </member>
         <member name="P:NgimuApi.Strings.SettingsRead_CouldNotDoAll">
@@ -4267,12 +4339,12 @@
         </member>
         <member name="P:NgimuApi.Strings.SettingsWrite_CommunicationError">
             <summary>
-              Looks up a localized string similar to A communication error occured while writing settings..
+              Looks up a localized string similar to A communication error occurred while writing settings..
             </summary>
         </member>
         <member name="P:NgimuApi.Strings.SettingsWrite_CouldNotDoAll">
             <summary>
-              Looks up a localized string similar to Could not write all settings..
+              Looks up a localized string similar to Could not confirm write of all settings..
             </summary>
         </member>
         <member name="P:NgimuApi.Strings.SettingsWrite_NoValidSettings">

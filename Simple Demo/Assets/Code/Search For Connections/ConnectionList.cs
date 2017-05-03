@@ -10,8 +10,8 @@ public class ConnectionList : MonoBehaviour
     [SerializeField]
     public ConnectionListItem ListItemPrefab;
 
-    private readonly Dictionary<ConnectionSearchInfo, ConnectionListItemStub> foundConnections = new Dictionary<ConnectionSearchInfo, ConnectionListItemStub>();
-    private readonly List<ConnectionSearchInfo> shouldRemove = new List<ConnectionSearchInfo>();
+    private readonly Dictionary<ConnectionSearchResult, ConnectionListItemStub> foundConnections = new Dictionary<ConnectionSearchResult, ConnectionListItemStub>();
+    private readonly List<ConnectionSearchResult> shouldRemove = new List<ConnectionSearchResult>();
     private readonly object syncObject = new object();
 
     private SearchForConnections autoConnector;
@@ -137,7 +137,7 @@ public class ConnectionList : MonoBehaviour
         connectionListItem.RectTransform.localScale = Vector3.one;
     }
 
-    private void AutoConnector_DeviceDiscovered(ConnectionSearchInfo obj)
+    private void AutoConnector_DeviceDiscovered(ConnectionSearchResult obj)
     {
         Debug.Log("Device Discovered: " + obj.DeviceDescriptor);
 
@@ -156,7 +156,7 @@ public class ConnectionList : MonoBehaviour
         }
     }
 
-    private void AutoConnector_DeviceExpired(ConnectionSearchInfo obj)
+    private void AutoConnector_DeviceExpired(ConnectionSearchResult obj)
     {
         Debug.Log("Device Expired: " + obj.DeviceDescriptor);
 
@@ -173,7 +173,7 @@ public class ConnectionList : MonoBehaviour
         }
     }
 
-    private void ConnectionListItem_Selected(ConnectionListItem item, ConnectionSearchInfo connectionSearchInfo)
+    private void ConnectionListItem_Selected(ConnectionListItem item, ConnectionSearchResult connectionSearchInfo)
     {
         NGIMUConnection connection = FindObjectOfType<NGIMUConnection>();
 
@@ -229,7 +229,7 @@ public class ConnectionList : MonoBehaviour
                 AlignItem(ref totalHeight, connectionListItemStub.Item);
             }
 
-            foreach (ConnectionSearchInfo info in shouldRemove)
+            foreach (ConnectionSearchResult info in shouldRemove)
             {
                 foundConnections.Remove(info);
             }
@@ -240,7 +240,7 @@ public class ConnectionList : MonoBehaviour
 
     private class ConnectionListItemStub
     {
-        public ConnectionSearchInfo Info;
+        public ConnectionSearchResult Info;
         public ConnectionListItem Item;
 
         public bool ShouldRemove;
