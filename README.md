@@ -14,3 +14,9 @@ Check the compatibility table below for more details.
 | Android | .NET 4.x | IL2CPP | ? | ✖ |
 | Android | .NET Standard 2.0 | Mono | ✖ | ✖ |
 | Android | .NET Standard 2.0 | IL2CPP | ✖ | ✖ |
+
+![](https://github.com/xioTechnologies/NGIMU-Unity-Example/blob/master/Screenshot%20Connections.png)
+
+![](https://github.com/xioTechnologies/NGIMU-Unity-Example/blob/master/Screenshot%20Running.png)
+
+![](https://github.com/xioTechnologies/NGIMU-Unity-Example/blob/master/Screenshot%20Console.png)
