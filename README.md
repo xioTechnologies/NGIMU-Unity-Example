@@ -5,13 +5,13 @@ This is an example [Unity](https://unity3d.com/) project for connecting to an NG
 Check the compatibility table below for more details.
 
 | Platform  | Framework | Runtime | Wi-Fi | Serial |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | :---: | :---: |
 | Windows | .NET 4.x | Mono | ✔ | ✔ |
 | Windows | .NET 4.x | IL2CPP | ✔ | ✖ |
 | Windows | .NET Standard 2.0 | Mono | ✖ | ✖ |
 | Windows | .NET Standard 2.0 | IL2CPP | ✖ | ✖ |
 | Android | .NET 4.x | Mono | ✔ | ✖ |
-| Android | .NET 4.x | IL2CPP | ? | ✖ |
+| Android | .NET 4.x | IL2CPP | **?** | ✖ |
 | Android | .NET Standard 2.0 | Mono | ✖ | ✖ |
 | Android | .NET Standard 2.0 | IL2CPP | ✖ | ✖ |
 
